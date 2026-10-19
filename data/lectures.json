@@ -1,0 +1,126 @@
+{
+  "title": "Gateway Classes Video Lectures",
+  "courses": {
+    "MATHS 4": {
+      "meta": {
+        "icon": "📐",
+        "badge": "Maths 4",
+        "title": "Engineering Mathematics IV"
+      },
+      "units": {
+        "Unit 1": {
+          "ONE SHORT": "https://rumble.com/embed/v6zuza8/?pub=4nsqfe"
+        },
+        "Unit 2": {
+          "ONE SHORT": "https://rumble.com/embed/v6zuzqc/?pub=4nsqfe"
+        },
+        "Unit 3": {
+          "ONE SHORT": "https://rumble.com/embed/v6zv13k/?pub=4nsqfe"
+        },
+        "Unit 4": {
+          "ONE SHORT": "https://rumble.com/embed/v6zv60y/?pub=4nsqfe"
+        },
+        "Unit 5": {
+          "ONE SHORT": "https://rumble.com/embed/v6zv7ai/?pub=4nsqfe"
+        }
+      }
+    },
+    "DSTL": {
+      "meta": {
+        "icon": "🔢",
+        "badge": "DSTL",
+        "title": "Discrete Structures & Theory of Logic"
+      },
+      "units": {
+        "Unit 1": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx09y/?pub=4nsqfe"
+        },
+        "Unit 2": {
+          "ONE SHORT": "https://rumble.com/embed/v6zwupi/?pub=4nsqfe"
+        },
+        "Unit 3": {
+          "ONE SHORT": "https://rumble.com/embed/v6zwxq8/?pub=4nsqfe"
+        },
+        "Unit 4": {
+          "ONE SHORT": "https://rumble.com/embed/v6zwux8/?pub=4nsqfe"
+        },
+        "Unit 5": {
+          "ONE SHORT": "https://rumble.com/embed/v6zwxl2/?pub=4nsqfe"
+        }
+      }
+    },
+    "COA": {
+      "meta": {
+        "icon": "💻",
+        "badge": "COA",
+        "title": "Computer Organization & Architecture"
+      },
+      "units": {
+        "Unit 1": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx3f0/?pub=4nsqfe"
+        },
+        "Unit 2": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx46o/?pub=4nsqfe"
+        },
+        "Unit 3": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx5fy/?pub=4nsqfe"
+        },
+        "Unit 4": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx4pe/?pub=4nsqfe"
+        },
+        "Unit 5": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx63s/?pub=4nsqfe"
+        }
+      }
+    },
+    "PYTHON": {
+      "meta": {
+        "icon": "🐍",
+        "badge": "Python",
+        "title": "Python Programming"
+      },
+      "units": {
+        "Unit 1": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx0rm/?pub=4nsqfe"
+        },
+        "Unit 2": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx1qc/?pub=4nsqfe"
+        },
+        "Unit 3": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx1xi/?pub=4nsqfe"
+        },
+        "Unit 4": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx24w/?pub=4nsqfe"
+        },
+        "Unit 5": {
+          "ONE SHORT": "https://rumble.com/embed/v6zx29a/?pub=4nsqfe"
+        }
+      }
+    },
+    "DSA": {
+      "meta": {
+        "icon": "🌳",
+        "badge": "DSA",
+        "title": "Data Structures & Algorithms"
+      },
+      "units": {
+        "Unit 1": {
+          "ONE SHORT": ""
+        },
+        "Unit 2": {
+          "ONE SHORT PART 1": "https://rumble.com/embed/v6zya0c/?pub=4nsqfe",
+          "ONE SHORT PART 2": "https://rumble.com/embed/v6zy9my/?pub=4nsqfe"
+        },
+        "Unit 3": {
+          "ONE SHORT": "https://rumble.com/embed/v6zya0o/?pub=4nsqfe"
+        },
+        "Unit 4": {
+          "ONE SHORT": "https://rumble.com/embed/v704g1s/?pub=4nsqfe"
+        },
+        "Unit 5": {
+          "ONE SHORT": ""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="robots" content="noindex, nofollow">
+  <title id="pageTitle">AKTU B.Tech Question Paper - Gateway Classes</title>
+  <link rel="stylesheet" href="gwc-ui.css">
+  <link rel="icon" href="https://i.ibb.co/qYC69dyG/Chat-GPT-Image-Aug-6-2026-10-25-09-PM.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #000000;
+      --bar-bg: #121214;
+      --border-cyan: rgba(255, 255, 255, 0.14);
+      --accent-cyan: #ffffff;
+      --text-main: #fafafa;
+      --text-muted: #a1a1aa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .viewer-app {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      position: relative;
+    }
+
+    /* Top Navigation Header */
+    .viewer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bar-bg);
+      border-bottom: 1px solid var(--border-cyan);
+      padding: 8px 16px;
+      gap: 10px;
+      flex-shrink: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .bar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 6px;
+      background: #18181b;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-back:hover {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+    }
+
+    .paper-info {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .paper-heading {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .paper-code {
+      font-family: 'Orbitron', monospace;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      background: rgba(0, 234, 255, 0.12);
+      padding: 2px 7px;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 234, 255, 0.3);
+      flex-shrink: 0;
+    }
+
+    .paper-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .paper-subinfo {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 1px;
+    }
+
+    .bar-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .tool-group {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .tool-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      color: #cbd5e1;
+      padding: 6px 10px;
+      font-size: 12.5px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      min-width: 32px;
+      height: 32px;
+    }
+    .tool-btn:hover:not(:disabled) {
+      background: rgba(0, 234, 255, 0.15);
+      color: var(--accent-cyan);
+    }
+    .tool-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .page-counter {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #cbd5e1;
+      padding: 0 8px;
+      white-space: nowrap;
+    }
+
+    .zoom-text {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      min-width: 44px;
+      text-align: center;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid #ffffff;
+      color: #000000;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-download:hover {
+      background: #e4e4e7;
+    }
+
+    /* PDF Viewport */
+    .pdf-viewport {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      position: relative;
+      background: #090e1f;
+      overflow: hidden;
+    }
+
+
+    #pdfScrollContainer {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: auto;
+      padding: 16px 8px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    .pdf-page-wrapper {
+      position: relative;
+      background: #ffffff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 234, 255, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      margin: 0 auto;
+      box-sizing: border-box;
+      transition: transform 0.15s ease;
+    }
+
+    .pdf-page-wrapper canvas {
+      display: block;
+      box-sizing: border-box;
+    }
+
+    .page-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(5, 8, 22, 0.75);
+      border: 1px solid var(--border-cyan);
+      color: var(--accent-cyan);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      pointer-events: none;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Cyber Loading Overlay */
+    .viewer-loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(5, 8, 22, 0.92);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+    }
+
+    .cyber-spinner {
+      width: 46px;
+      height: 46px;
+      border: 3px solid rgba(0, 234, 255, 0.15);
+      border-top-color: var(--accent-cyan);
+      border-radius: 50%;
+      animation: spin 0.85s linear infinite;
+      box-shadow: 0 0 16px rgba(0, 234, 255, 0.3);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .loading-title {
+      color: var(--accent-cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .loading-sub {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Cyber Error State */
+    .viewer-error {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--bar-bg);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      border-radius: 14px;
+      padding: 24px 28px;
+      max-width: 90%;
+      width: 420px;
+      text-align: center;
+      display: none;
+      z-index: 60;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .error-icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .error-title {
+      color: #f87171;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .error-msg {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .error-btn-group {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .btn-retry {
+      background: var(--accent-cyan);
+      color: #050816;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s ease;
+    }
+    .btn-retry:hover {
+      box-shadow: 0 0 14px rgba(0, 234, 255, 0.6);
+    }
+
+    /* Mobile Bottom Quick-Toolbar */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(13, 20, 36, 0.95);
+      border-top: 1px solid var(--border-cyan);
+      padding: 6px 12px;
+      z-index: 90;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 840px) {
+      .viewer-bar {
+        padding: 8px 12px;
+      }
+      .paper-title {
+        max-width: 140px;
+        font-size: 12.5px;
+      }
+      .tool-group.page-group {
+        display: none;
+      }
+      .mobile-bar {
+        display: flex;
+        z-index: 95; /* above anchor rail (z-index:80) */
+      }
+      #pdfScrollContainer {
+        /* 50px mobile-bar + 56px anchor + 10px gap */
+        padding-bottom: 120px;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .btn-back span.text { display: none; }
+      .paper-title { max-width: 110px; }
+      .tool-group.zoom-group { display: none; }
+      .btn-fullscreen { display: none; }
+      .btn-download span.dl-text { display: none; }
+      .btn-download { padding: 6px 10px; }
+    }
+  </style>
+  <script src="js/security-shield.js"></script>
+</head>
+<body>
+
+  <div class="viewer-app">
+
+    <!-- Top Bar -->
+    <header class="viewer-bar">
+      <div class="bar-left">
+        <a class='btn-back' href='/under' id='backBtn' title='Back to PYQ Bank'>
+          <span>⬅</span><span class="text"> PYQ Bank</span>
+        </a>
+        <div class="paper-info">
+          <div class="paper-heading">
+            <span class="paper-code" id="viewCode">AKTU</span>
+            <span class="paper-title" id="viewTitle">Question Paper</span>
+          </div>
+          <div class="paper-subinfo">
+            <span id="viewSem">Semester --</span> •
+            <span id="viewSession">Session --</span> •
+            <span>Gateway Classes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bar-controls">
+        <!-- Page Nav Group -->
+        <div class="tool-group page-group">
+          <button type="button" class="tool-btn" id="btnPrevPage" title="Previous Page">◀</button>
+          <span class="page-counter" id="pageCounter">Page 1 / 1</span>
+          <button type="button" class="tool-btn" id="btnNextPage" title="Next Page">▶</button>
+        </div>
+
+        <!-- Zoom Group -->
+        <div class="tool-group zoom-group">
+          <button type="button" class="tool-btn" id="btnZoomOut" title="Zoom Out">−</button>
+          <span class="zoom-text" id="zoomText">100%</span>
+          <button type="button" class="tool-btn" id="btnZoomIn" title="Zoom In">+</button>
+          <button type="button" class="tool-btn" id="btnFitWidth" title="Fit to Width">↔ Fit</button>
+        </div>
+
+        <button type="button" class="tool-btn btn-fullscreen" id="btnFullscreen" title="Toggle Fullscreen">⛶</button>
+        <button type="button" class="btn-download" id="btnDownload" title="Download PDF to Device">
+          <span>⬇</span><span class="dl-text"> Download PDF</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- PDF Viewport -->
+    <main class="pdf-viewport">
+      <div id="pdfScrollContainer">
+        <!-- Rendered Canvas Pages injected here -->
+      </div>
+
+      <!-- Loading Overlay -->
+      <div id="loadingOverlay" class="viewer-loading">
+        <div class="cyber-spinner"></div>
+        <div class="loading-title" id="loadingTitle">CONNECTING SECURE BACKEND...</div>
+        <div class="loading-sub" id="loadingSub">Loading Question Paper with high-definition renderer</div>
+      </div>
+
+      <!-- Error Overlay -->
+      <div id="errorOverlay" class="viewer-error">
+        <div class="error-icon">⚠️</div>
+        <div class="error-title">Question Paper Unavailable</div>
+        <div class="error-msg" id="errorMsg">Could not load paper. Please retry or pick another paper from the bank.</div>
+        <div class="error-btn-group">
+          <button type="button" class="btn-retry" id="btnRetry">↺ Retry</button>
+          <a class='btn-back' href='/under'>⬅ Back to Papers</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Mobile Bottom Quick Toolbar -->
+    <div class="mobile-bar" id="mobileBar">
+      <button type="button" class="tool-btn" id="mBtnPrev">◀ Prev</button>
+      <span class="page-counter" id="mPageCounter">1 / 1</span>
+      <button type="button" class="tool-btn" id="mBtnNext">Next ▶</button>
+      <button type="button" class="tool-btn" id="mBtnZoomOut">−</button>
+      <span class="zoom-text" id="mZoomText">100%</span>
+      <button type="button" class="tool-btn" id="mBtnZoomIn">+</button>
+      <button type="button" class="tool-btn" id="mBtnFit">Fit ↔</button>
+    </div>
+
+  </div>
+
+  <!-- PDF.js Local Script with CDN Fallback -->
+  <script src="js/pdf.min.js"></script>
+  <script>
+    if (typeof pdfjsLib === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"><\/script>');
+    }
+  </script>
+
+  <script>
+    (function() {
+      // Configure PDF.js Worker
+      if (typeof pdfjsLib !== 'undefined') {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.min.js';
+      }
+
+      // Parse Query Parameters
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id') || '';
+      const nonce = params.get('nonce') || '';
+      const code = params.get('code') || 'AKTU';
+      const title = params.get('title') || 'Question Paper';
+      const sem = params.get('sem') || '';
+      const session = params.get('session') || '';
+
+      document.getElementById('viewCode').textContent = code;
+      document.getElementById('viewTitle').textContent = title;
+      document.getElementById('viewSem').textContent = sem ? 'Semester ' + sem : 'B.Tech';
+      document.getElementById('viewSession').textContent = session || 'AKTU Exam';
+      document.getElementById('pageTitle').textContent = code + ' - ' + title + ' (' + (session || 'AKTU') + ') | Gateway Classes';
+
+      const isLocal = window.location.protocol === 'file:' ||
+                      window.location.hostname === '127.0.0.1' ||
+                      window.location.hostname === 'localhost';
+
+      function buildPdfUrl(download = false) {
+        const base = isLocal ? 'http://127.0.0.1:3000/pyq-download/' : '/pyq-download/';
+        const endpoint = base + encodeURIComponent(id) + (nonce ? '/' + encodeURIComponent(nonce) : '');
+        const query = new URLSearchParams({ id, nonce, code, title, session, sem });
+        if (download) query.set('dl', '1');
+        return endpoint + '?' + query.toString();
+      }
+
+      // State
+      let pdfDoc = null;
+      let totalPages = 0;
+      let currentPage = 1;
+      let currentScale = 1.0;
+      let isFitWidth = true;
+      let cachedPdfBytes = null;
+      let pageWrappers = [];
+
+      // Elements
+      const scrollContainer = document.getElementById('pdfScrollContainer');
+      const loadingOverlay = document.getElementById('loadingOverlay');
+      const loadingTitle = document.getElementById('loadingTitle');
+      const loadingSub = document.getElementById('loadingSub');
+      const errorOverlay = document.getElementById('errorOverlay');
+      const errorMsg = document.getElementById('errorMsg');
+      const pageCounter = document.getElementById('pageCounter');
+      const mPageCounter = document.getElementById('mPageCounter');
+      const zoomText = document.getElementById('zoomText');
+      const mZoomText = document.getElementById('mZoomText');
+      const btnPrevPage = document.getElementById('btnPrevPage');
+      const btnNextPage = document.getElementById('btnNextPage');
+      const mBtnPrev = document.getElementById('mBtnPrev');
+      const mBtnNext = document.getElementById('mBtnNext');
+      const btnZoomIn = document.getElementById('btnZoomIn');
+      const btnZoomOut = document.getElementById('btnZoomOut');
+      const btnFitWidth = document.getElementById('btnFitWidth');
+      const mBtnZoomIn = document.getElementById('mBtnZoomIn');
+      const mBtnZoomOut = document.getElementById('mBtnZoomOut');
+      const mBtnFit = document.getElementById('mBtnFit');
+      const btnFullscreen = document.getElementById('btnFullscreen');
+      const btnDownload = document.getElementById('btnDownload');
+      const btnRetry = document.getElementById('btnRetry');
+
+      function showLoading(title, sub) {
+        loadingTitle.textContent = title || 'LOADING QUESTION PAPER...';
+        loadingSub.textContent = sub || 'Streaming PDF via secure Gateway backend';
+        loadingOverlay.style.display = 'flex';
+        errorOverlay.style.display = 'none';
+      }
+
+      function hideLoading() {
+        loadingOverlay.style.display = 'none';
+      }
+
+      function showError(msg) {
+        hideLoading();
+        errorMsg.textContent = msg || 'Paper temporarily unavailable. Please pick another paper from the bank.';
+        errorOverlay.style.display = 'block';
+      }
+
+      function updateCounterUI() {
+        const text = `Page ${currentPage} / ${totalPages || 1}`;
+        const mText = `${currentPage} / ${totalPages || 1}`;
+        if (pageCounter) pageCounter.textContent = text;
+        if (mPageCounter) mPageCounter.textContent = mText;
+        if (btnPrevPage) btnPrevPage.disabled = (currentPage <= 1);
+        if (btnNextPage) btnNextPage.disabled = (currentPage >= totalPages);
+        if (mBtnPrev) mBtnPrev.disabled = (currentPage <= 1);
+        if (mBtnNext) mBtnNext.disabled = (currentPage >= totalPages);
+      }
+
+      function updateZoomUI() {
+        const text = Math.round(currentScale * 100) + '%';
+        if (zoomText) zoomText.textContent = text;
+        if (mZoomText) mZoomText.textContent = text;
+      }
+
+      // Calculate fit-to-width scale for optimal reading on phones and desktops
+      async function calculateFitWidthScale(page) {
+        const unscaledViewport = page.getViewport({ scale: 1.0 });
+        const containerWidth = (scrollContainer.clientWidth || window.innerWidth) - 16;
+        const maxWidth = Math.min(containerWidth, 900);
+        return Math.max(0.25, maxWidth / unscaledViewport.width);
+      }
+
+      // Render all pages continuously
+      async function renderAllPages() {
+        if (!pdfDoc) return;
+        scrollContainer.innerHTML = '';
+        pageWrappers = [];
+
+        const dpr = window.devicePixelRatio || 1;
+
+        for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+          const page = await pdfDoc.getPage(pageNum);
+
+          if (isFitWidth && pageNum === 1) {
+            currentScale = await calculateFitWidthScale(page);
+            updateZoomUI();
+          }
+
+          const viewport = page.getViewport({ scale: currentScale });
+
+          const wrapper = document.createElement('div');
+          wrapper.className = 'pdf-page-wrapper';
+          wrapper.id = 'page-wrapper-' + pageNum;
+          wrapper.dataset.pageNum = pageNum;
+          wrapper.style.width = Math.floor(viewport.width) + 'px';
+          wrapper.style.height = Math.floor(viewport.height) + 'px';
+
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d', { alpha: false });
+          canvas.width = Math.floor(viewport.width * dpr);
+          canvas.height = Math.floor(viewport.height * dpr);
+          canvas.style.width = Math.floor(viewport.width) + 'px';
+          canvas.style.height = Math.floor(viewport.height) + 'px';
+
+          const badge = document.createElement('div');
+          badge.className = 'page-badge';
+          badge.textContent = `Page ${pageNum}`;
+
+          wrapper.appendChild(canvas);
+          wrapper.appendChild(badge);
+          scrollContainer.appendChild(wrapper);
+          pageWrappers.push(wrapper);
+
+          const renderContext = {
+            canvasContext: context,
+            viewport: viewport,
+            transform: dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null
+          };
+
+          await page.render(renderContext).promise;
+        }
+
+        updateCounterUI();
+        observeVisiblePages();
+      }
+
+      // Intersection Observer to track currently viewed page while scrolling
+      let observer = null;
+      function observeVisiblePages() {
+        if (observer) observer.disconnect();
+        observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const num = parseInt(entry.target.dataset.pageNum, 10);
+              if (!isNaN(num)) {
+                currentPage = num;
+                updateCounterUI();
+              }
+            }
+          });
+        }, {
+          root: scrollContainer,
+          threshold: 0.4
+        });
+
+        pageWrappers.forEach(w => observer.observe(w));
+      }
+
+      function scrollToPage(pageNum) {
+        const target = document.getElementById('page-wrapper-' + pageNum);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          currentPage = pageNum;
+          updateCounterUI();
+        }
+      }
+
+      // Zoom functions
+      async function zoomIn() {
+        isFitWidth = false;
+        currentScale = Math.min(3.0, currentScale + 0.2);
+        updateZoomUI();
+        showLoading('ZOOMING...', 'Re-rendering pages at ' + Math.round(currentScale * 100) + '%');
+        await renderAllPages();
+        hideLoading();
+      }
+
+      async function zoomOut() {
+        isFitWidth = false;
+        currentScale = Math.max(0.4, currentScale - 0.2);
+        updateZoomUI();
+        showLoading('ZOOMING...', 'Re-rendering pages at ' + Math.round(currentScale * 100) + '%');
+        await renderAllPages();
+        hideLoading();
+      }
+
+      async function fitWidth() {
+        isFitWidth = true;
+        if (!pdfDoc) return;
+        const page1 = await pdfDoc.getPage(1);
+        currentScale = await calculateFitWidthScale(page1);
+        updateZoomUI();
+        showLoading('ADJUSTING VIEW...', 'Fitting to device width');
+        await renderAllPages();
+        hideLoading();
+      }
+
+      // Multi-endpoint fallback fetch that never crashes on single port/network failure
+      async function fetchPdfBytes(download = false) {
+        const queryParams = new URLSearchParams({ id, nonce, code, title, session, sem });
+        if (download) queryParams.set('dl', '1');
+        const qStr = queryParams.toString();
+
+        const candidates = [];
+        // 1. Local backend on port 3000 (instant for local testing)
+        candidates.push('http://127.0.0.1:3000/pyq-download/' + encodeURIComponent(id) + (nonce ? '/' + encodeURIComponent(nonce) : '') + '?' + qStr);
+        // 2. Relative clean route on current host
+        candidates.push('/pyq-download/' + encodeURIComponent(id) + (nonce ? '/' + encodeURIComponent(nonce) : '') + '?' + qStr);
+        // 3. Direct Netlify serverless function
+        candidates.push('/.netlify/functions/download?' + qStr);
+        // 4. Remote Netlify production backup
+        candidates.push('https://getwayclassesnotes.netlify.app/.netlify/functions/download?' + qStr);
+
+        let lastErr = null;
+        for (const endpoint of candidates) {
+          try {
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), 12000);
+            const res = await fetch(endpoint, { signal: ctrl.signal, cache: 'default' });
+            clearTimeout(timer);
+
+            if (res.ok) {
+              const buf = await res.arrayBuffer();
+              if (buf.byteLength > 100 && String.fromCharCode(...new Uint8Array(buf.slice(0, 4))) === '%PDF') {
+                return buf;
+              }
+            }
+          } catch (err) {
+            lastErr = err;
+          }
+        }
+        throw lastErr || new Error('Question paper temporarily unavailable. Please retry.');
+      }
+
+      // Direct Download Function
+      async function triggerDirectDownload() {
+        const safeTitle = (title || 'Question-Paper').replace(/[^a-zA-Z0-9_-]/g, '_');
+        const filename = `${code || 'AKTU'}-${safeTitle}.pdf`;
+        const dlBtnText = document.querySelector('#btnDownload .dl-text');
+        const originalText = dlBtnText ? dlBtnText.textContent : ' Download PDF';
+
+        if (dlBtnText) dlBtnText.textContent = ' Preparing...';
+
+        // 1. Use in-memory cached PDF bytes if available
+        if (cachedPdfBytes && cachedPdfBytes.byteLength > 100) {
+          const blob = new Blob([cachedPdfBytes], { type: 'application/pdf' });
+          const blobUrl = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.style.display = 'none';
+          a.href = blobUrl;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(() => {
+            try {
+              if (a.parentNode) a.parentNode.removeChild(a);
+              URL.revokeObjectURL(blobUrl);
+            } catch (_) {}
+          }, 60000);
+
+          if (dlBtnText) {
+            dlBtnText.textContent = ' Saved!';
+            setTimeout(() => { dlBtnText.textContent = originalText; }, 2500);
+          }
+          return;
+        }
+
+        // 2. Fetch from backend with fallbacks
+        try {
+          const buf = await fetchPdfBytes(true);
+          cachedPdfBytes = buf;
+          const blob = new Blob([buf], { type: 'application/pdf' });
+          const blobUrl = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.style.display = 'none';
+          a.href = blobUrl;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(() => {
+            try {
+              if (a.parentNode) a.parentNode.removeChild(a);
+              URL.revokeObjectURL(blobUrl);
+            } catch (_) {}
+          }, 60000);
+
+          if (dlBtnText) {
+            dlBtnText.textContent = ' Saved!';
+            setTimeout(() => { dlBtnText.textContent = originalText; }, 2500);
+          }
+          return;
+        } catch (_) {}
+
+        if (dlBtnText) {
+          dlBtnText.textContent = ' ❌ Retry';
+          setTimeout(() => { dlBtnText.textContent = originalText; }, 2500);
+        }
+      }
+
+      // Main Load Function
+      async function loadPdf() {
+        if (!id) {
+          showError('No question paper ID specified. Please select a paper from the PYQ bank.');
+          return;
+        }
+
+        showLoading('CONNECTING SECURE GATEWAY...', 'Fetching paper via Gateway Classes backend');
+
+        try {
+          const arrayBuffer = await fetchPdfBytes(false);
+          cachedPdfBytes = arrayBuffer;
+
+          showLoading('RENDERING PAGES...', 'Processing document with high-definition canvas');
+
+          if (typeof pdfjsLib === 'undefined') {
+            throw new Error('PDF.js rendering engine could not be initialized');
+          }
+
+          const loadingTask = pdfjsLib.getDocument({
+            data: arrayBuffer,
+            cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/cmaps/',
+            cMapPacked: true,
+            standardFontDataUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/standard_fonts/'
+          });
+
+          pdfDoc = await loadingTask.promise;
+          totalPages = pdfDoc.numPages;
+          currentPage = 1;
+
+          await renderAllPages();
+          hideLoading();
+
+        } catch (err) {
+          console.error('Failed to load PDF:', err);
+          showError(err.message || 'Paper temporarily unavailable. Please retry shortly.');
+        }
+      }
+
+      // Download Action
+      function triggerDownload() {
+        triggerDirectDownload();
+      }
+
+      // Fullscreen
+      function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen().catch(() => {});
+        }
+      }
+
+      // Event Listeners
+      if (btnPrevPage) btnPrevPage.onclick = () => scrollToPage(Math.max(1, currentPage - 1));
+      if (btnNextPage) btnNextPage.onclick = () => scrollToPage(Math.min(totalPages, currentPage + 1));
+      if (mBtnPrev) mBtnPrev.onclick = () => scrollToPage(Math.max(1, currentPage - 1));
+      if (mBtnNext) mBtnNext.onclick = () => scrollToPage(Math.min(totalPages, currentPage + 1));
+
+      if (btnZoomIn) btnZoomIn.onclick = zoomIn;
+      if (btnZoomOut) btnZoomOut.onclick = zoomOut;
+      if (btnFitWidth) btnFitWidth.onclick = fitWidth;
+      if (mBtnZoomIn) mBtnZoomIn.onclick = zoomIn;
+      if (mBtnZoomOut) mBtnZoomOut.onclick = zoomOut;
+      if (mBtnFit) mBtnFit.onclick = fitWidth;
+
+      if (btnFullscreen) btnFullscreen.onclick = toggleFullscreen;
+      if (btnDownload) btnDownload.onclick = triggerDownload;
+      if (btnRetry) btnRetry.onclick = loadPdf;
+
+      // Window resize re-fits width
+      let resizeTimer = null;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (isFitWidth && pdfDoc) {
+            fitWidth();
+          }
+        }, 200);
+      });
+
+      // Keyboard navigation
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          scrollToPage(Math.max(1, currentPage - 1));
+        } else if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+          scrollToPage(Math.min(totalPages, currentPage + 1));
+        } else if (e.key === '+' || e.key === '=') {
+          zoomIn();
+        } else if (e.key === '-') {
+          zoomOut();
+        }
+      });
+
+      // Initial Load
+      loadPdf();
+
+    })();
+  </script>
+
+  <!-- Security & Protections -->
+  <script>
+    document.addEventListener('contextmenu', event => /* contextmenu enabled */);
+  </script>
+
+  <!-- Ad engine — highest-dwell page (3-8 min per PDF). Anchor rail only:
+       CSS above already reserves 120px + offsets mobileBar above it, so it
+       never covers the PDF, download button, or nav. Mid-content is
+       auto-skipped here (pdfScrollContainer is blocklisted in site-ads.js). -->
+  <script src="site-ads.js"></script>
+</body>
+</html>
