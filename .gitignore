@@ -1,17 +1,6 @@
-# Dependencies
 node_modules/
-package-lock.json
-
-# Internal scraper & raw crawl sources
-raw_data/
-scripts/
-
-# Server cache & logs
-server/cache/
+server/cache/pdfs/*.pdf
+!server/cache/pdfs/.gitkeep
+.DS_Store
 *.log
 npm-debug.log*
-
-# OS & Environment
-.DS_Store
-Thumbs.db
-.env

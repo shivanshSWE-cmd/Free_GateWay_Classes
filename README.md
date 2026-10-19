@@ -2,7 +2,7 @@
 
 A complete, production-ready full-stack clone of the **[AKTU BTech Notes Store - Gateway Classes](https://getwayclassesnotes.netlify.app/)**. 
 
-Includes **all original data** (handwritten notes, one-shot revision units, lecture notes, video playlists, MultiAtoms notes, and 1,961+ solved AKTU PYQ question papers), a **high-speed Express REST API backend** with disk-cached PDF streaming proxy, and a **cyberpunk dark UI** with matrix rain, global fuzzy instant search (`Ctrl+K`), and built-in PDF viewers.
+Includes **all original data** (handwritten notes, one-shot revision units, lecture notes, video playlists, MultiAtoms notes, and 1,961+ solved AKTU PYQ question papers), a **high-speed Express REST API backend** with disk-cached PDF streaming proxy, and a **classic Black & White UI** matching Gateway Classes official style with global fuzzy instant search (`Ctrl+K`), in-page responsive video player, and built-in PDF viewers.
 
 ---
 
@@ -14,10 +14,10 @@ Includes **all original data** (handwritten notes, one-shot revision units, lect
   - **3rd Year**: 34 Subjects • 323 Notes (Web Tech, DBMS, DAA, ML, Compiler Design, COI, etc.).
   - **4th Year**: 20 Subjects • 127 Notes (AI, Cloud Computing, Blockchain, IoT, Deep Learning, etc.).
   - **MultiAtoms Hubs**: 2nd, 3rd, and 4th Year dedicated MultiAtoms notes with direct Google Drive / Mediafire links.
-  - **Video Lectures**: Full course playlists for 2nd Year (Maths 4, DSA, COA, DSTL, Python) with embedded players.
+  - **Video Lectures Hub**: **28 Core AKTU Courses** with Unit-wise One-Shot revision videos, marathon sessions, and full YouTube playlists by **AH Tutorials** (@AHTUTORIALS2024) and **MultiAtoms**.
   - **AKTU PYQ Bank**: 1,961+ official AKTU previous year university end-semester papers covering **all 8 semesters** with instant branch/semester filtering.
 - **Global Instant Search (`Ctrl+K`)**:
-  - Live search across **3,615+ indexed educational entities** (notes, units, subjects, courses, question papers).
+  - Live search across **3,757+ indexed educational entities** (notes, units, subjects, courses, question papers).
   - Instant dropdown results with badges for each year and direct links.
 - **Backend PDF Streaming Proxy & Disk Cache**:
   - Endpoints `/pyq-download/:id/:nonce` and `/.netlify/functions/download` stream papers seamlessly.

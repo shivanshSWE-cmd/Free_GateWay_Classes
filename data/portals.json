@@ -7,7 +7,7 @@
       "count": "13 Subjects • 182 Notes",
       "badge": "1st Year • All Branches",
       "icon": "📚",
-      "color": "#00eaff"
+      "color": "#ffffff"
     },
     {
       "id": "2ndyear",
@@ -16,7 +16,7 @@
       "count": "15 Subjects • 881 Notes",
       "badge": "2nd Year • CSE / IT",
       "icon": "📝",
-      "color": "#38bdf8"
+      "color": "#ffffff"
     },
     {
       "id": "3year",
@@ -25,7 +25,7 @@
       "count": "34 Subjects • 323 Notes",
       "badge": "3rd Year • All Electives",
       "icon": "🎓",
-      "color": "#a855f7"
+      "color": "#ffffff"
     },
     {
       "id": "4year",
@@ -34,7 +34,7 @@
       "count": "20 Subjects • 127 Notes",
       "badge": "4th Year • All Platforms",
       "icon": "🚀",
-      "color": "#6366f1"
+      "color": "#ffffff"
     },
     {
       "id": "multiatom",
@@ -43,7 +43,7 @@
       "count": "11 Subjects • Fast PDF",
       "badge": "Multi Atoms • 2nd Year",
       "icon": "🧪",
-      "color": "#10b981"
+      "color": "#ffffff"
     },
     {
       "id": "3year-multiatom",
@@ -52,7 +52,7 @@
       "count": "14 Subjects • 63 Notes",
       "badge": "Multi Atoms • 3rd Year",
       "icon": "⚛️",
-      "color": "#14b8a6"
+      "color": "#ffffff"
     },
     {
       "id": "4year-multiatom",
@@ -61,16 +61,16 @@
       "count": "11 Subjects • 25 Notes",
       "badge": "Multi Atoms • 4th Year",
       "icon": "⚛️",
-      "color": "#22c55e"
+      "color": "#ffffff"
     },
     {
       "id": "lectindex",
       "title": "Video Lectures Hub",
       "path": "/lectindex.html",
-      "count": "5 Courses • All Units",
-      "badge": "Gateway Playlists",
+      "count": "28 Courses • One-Shots & Playlists",
+      "badge": "AH Tutorials • MultiAtoms",
       "icon": "🎬",
-      "color": "#ef4444"
+      "color": "#ffffff"
     },
     {
       "id": "under",
@@ -79,11 +79,11 @@
       "count": "1,961 Papers • Sem 1-8",
       "badge": "Sem 1 to 8 • All Branches",
       "icon": "🎯",
-      "color": "#f59e0b"
+      "color": "#ffffff"
     }
   ],
   "stats": {
-    "totalSearchItems": 3615,
+    "totalSearchItems": 3757,
     "totalPYQs": 1961,
     "totalCategories": 9
   }

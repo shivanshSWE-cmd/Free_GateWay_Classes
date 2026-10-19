@@ -18,53 +18,11 @@ if (!fs.existsSync(cacheDir)) {
   fs.mkdirSync(cacheDir, { recursive: true });
 }
 
-// Security Headers Middleware
-app.use((req, res, next) => {
-  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
-  res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('X-XSS-Protection', '1; mode=block');
-  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
-  next();
-});
-
-// In-memory rate limiter & anti-bot protection for API endpoints
-const ipRequestCounts = new Map();
-setInterval(() => ipRequestCounts.clear(), 60000); // Reset every minute
-
-function antiScrapeMiddleware(req, res, next) {
-  // Allow health check and static assets freely
-  if (req.path === '/api/health' || (!req.path.startsWith('/api') && !req.path.startsWith('/pyq-download'))) {
-    return next();
-  }
-
-  const clientIp = req.ip || req.connection.remoteAddress || '127.0.0.1';
-  const userAgent = (req.headers['user-agent'] || '').toLowerCase();
-
-  // Block automated scraper libraries attempting bulk harvesting
-  const scraperBots = ['scrapy', 'aiohttp', 'httpx', 'wget', 'mechanize', 'spider', 'crawler'];
-  const isScraper = scraperBots.some(bot => userAgent.includes(bot));
-  if (isScraper) {
-    return res.status(403).json({
-      error: 'Direct bulk data scraping is protected. Please access via the official website interface.',
-      status: 403
-    });
-  }
-
-  // Rate limiting: max 100 API requests per minute per IP
-  const currentCount = (ipRequestCounts.get(clientIp) || 0) + 1;
-  ipRequestCounts.set(clientIp, currentCount);
-
-  if (currentCount > 100) {
-    return res.status(429).json({
-      error: 'Rate limit exceeded. Automated scraping is throttled to protect server resources.',
-      retryAfter: 60
-    });
-  }
-
-  next();
-}
-
-app.use(antiScrapeMiddleware);
+// Middleware
+app.use(compression());
+app.use(cors());
+app.use(express.json());
+app.use(morgan('dev'));
 
 // Cache data in memory for sub-millisecond API response times
 const dataStore = {
