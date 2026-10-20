@@ -4,3 +4,9 @@ server/cache/pdfs/*.pdf
 .DS_Store
 *.log
 npm-debug.log*
+
+# Capacitor Android build & APK binaries (Local sharing only, not pushed to GitHub)
+android/
+*.apk
+public/downloads/*.apk
+

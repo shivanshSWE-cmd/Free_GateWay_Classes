@@ -406,21 +406,6 @@
     if (badge) badge.textContent = count;
   }
 
-  function ensureFloatingApkButton() {
-    let btn = document.getElementById('floatingApkBtn');
-    if (!btn) {
-      btn = document.createElement('div');
-      btn.id = 'floatingApkBtn';
-      btn.title = 'Download Gateway Classes Android App (APK)';
-      btn.innerHTML = `
-        <i class="fab fa-android"></i>
-        <span>Get APK</span>
-      `;
-      btn.onclick = () => window.openApkModal();
-      document.body.appendChild(btn);
-    }
-  }
-
   function updateTopNavPills() {
     const count = getCompletedCount();
     document.querySelectorAll('.nav-tracker-btn, .tracker-nav-pill').forEach(pill => {
@@ -794,7 +779,6 @@
     attachTrackersToNoteCards();
     updateSubjectProgressBars();
     ensureFloatingButton();
-    ensureFloatingApkButton();
     updateTopNavPills();
     updateHomeBanner();
   }

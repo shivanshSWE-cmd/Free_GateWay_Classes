@@ -536,78 +536,45 @@
    ANDROID APK DOWNLOAD BUTTONS & MODAL (GATEWAY CLASSES)
    ============================================================ */
 
-/* ── Floating APK Button (Above Floating Tracker) ───────────── */
-#floatingApkBtn {
-  position: fixed;
-  bottom: 80px;
-  right: 24px;
-  z-index: 9990;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: #ffffff;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 12.5px;
-  font-weight: 700;
-  border: 1px solid rgba(52, 211, 153, 0.45);
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35), 0 3px 8px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transition: all 0.22s ease;
-  user-select: none;
+/* ── Floating APK Button (Hidden from front) ─────────────────── */
+#floatingApkBtn,
+.hero-apk-cta {
+  display: none !important;
 }
 
-#floatingApkBtn:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.55);
-  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-  color: #070d18;
-}
-
-#floatingApkBtn i {
-  font-size: 14px;
-}
-
-@media (max-width: 600px) {
-  #floatingApkBtn {
-    bottom: 64px;
-    right: 16px;
-    padding: 6px 12px;
-    font-size: 11px;
-  }
-}
-
-/* ── Top Bar Nav APK Button ─────────────────────────────────── */
+/* ── Top Bar Nav APK Button (Subtle, Small, Top Only) ────────── */
 .nav-apk-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.15));
-  border: 1px solid rgba(16, 185, 129, 0.45);
-  color: #34d399;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #94a3b8;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.22s ease;
+  transition: all 0.2s ease;
   white-space: nowrap;
-  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.15);
 }
 
 .nav-apk-btn:hover {
-  background: linear-gradient(135deg, #10b981, #059669);
-  color: #070d18;
-  border-color: #10b981;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: none;
+  box-shadow: none;
 }
 
 .nav-apk-btn i {
-  color: inherit;
+  color: #94a3b8;
+  font-size: 11px;
+}
+.nav-apk-btn:hover i {
+  color: #ffffff;
+}
   font-size: 13.5px;
 }
 
