@@ -40,6 +40,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/global-search.css">
   <link rel="stylesheet" href="css/student-tracker.css">
+  <link rel="manifest" href="/manifest.json">
 
   <script type="application/ld+json">
   {
@@ -468,6 +469,7 @@
         </div>
       </a>
       <div class="top-bar-links">
+        <button type="button" class="nav-apk-btn" onclick="window.openApkModal()" title="Download Official Gateway Classes Android App"><i class="fab fa-android"></i> 📲 Download APK</button>
         <button type="button" class="nav-tracker-btn" onclick="window.openGwcTracker()"><i class="fa fa-chart-pie"></i> 🎯 My Tracker</button>
         <a href="/api-docs.html" class="nav-api-btn"><i class="fa fa-code"></i> API Explorer</a>
         <span class="nav-badge">⚡ AKTU NOTES HUB 2026</span>
@@ -482,6 +484,13 @@
         <span class="stat-chip">📚 1st to 4th Year</span>
         <span class="stat-chip">⚡ Instant Access</span>
         <span class="stat-chip">🎯 AKTU Verified</span>
+      </div>
+
+      <!-- Android App APK Download CTA -->
+      <div class="hero-apk-cta">
+        <button type="button" class="btn-download-apk-hero" onclick="window.openApkModal()">
+          <i class="fab fa-android"></i> <span>Download Android App (APK)</span> <span class="apk-chip-free">v2.0 • 7.0 MB</span>
+        </button>
       </div>
 
       <!-- Global Live Search -->

@@ -247,6 +247,47 @@ app.get('/.netlify/functions/download', handlePdfDownload);
 app.get('/api/pyq/download', handlePdfDownload);
 
 // ==========================================
+// ANDROID APK DOWNLOAD ROUTES
+// ==========================================
+const apkFilePath = path.join(publicDir, 'downloads', 'GatewayClasses-AKTU-Notes-v2.0.apk');
+
+function handleApkDownload(req, res) {
+  if (fs.existsSync(apkFilePath)) {
+    res.setHeader('Content-Type', 'application/vnd.android.package-archive');
+    res.setHeader('Content-Disposition', 'attachment; filename="GatewayClasses-AKTU-Notes-v2.0.apk"');
+    return res.sendFile(apkFilePath);
+  }
+  res.redirect('https://play.google.com/store/apps/details?id=co.white.mvxiz');
+}
+
+app.get('/download-apk', handleApkDownload);
+app.get('/download/apk', handleApkDownload);
+app.get('/app.apk', handleApkDownload);
+app.get('/gateway-classes.apk', handleApkDownload);
+
+app.get('/api/apk/info', (req, res) => {
+  const exists = fs.existsSync(apkFilePath);
+  const sizeBytes = exists ? fs.statSync(apkFilePath).size : 7342123;
+  res.json({
+    appName: 'Gateway Classes - AKTU Notes & Study Hub',
+    version: '2.0.0',
+    fileName: 'GatewayClasses-AKTU-Notes-v2.0.apk',
+    fileSizeMB: (sizeBytes / (1024 * 1024)).toFixed(2) + ' MB',
+    sizeBytes: sizeBytes,
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=co.white.mvxiz',
+    downloadUrl: '/download-apk',
+    releaseDate: '2026-10-20',
+    features: [
+      'Offline B.Tech 1st to 4th Year Notes',
+      'Unit-Wise One-Shot Revision Lectures (AH Tutorials & MultiAtoms)',
+      '1,960+ AKTU Solved Question Papers',
+      'Student Unit Completion Tracker',
+      '0 Distractions, High-Speed PDF Access'
+    ]
+  });
+});
+
+// ==========================================
 // FRONTEND ROUTE HANDLERS
 // ==========================================
 

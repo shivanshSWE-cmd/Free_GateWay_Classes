@@ -1,10 +1,11 @@
 /**
- * GATEWAY CLASSES — STUDENT UNIT COMPLETION TRACKER
- * Official Gateway Classes Student Study Tracker
+ * GATEWAY CLASSES — STUDENT UNIT COMPLETION TRACKER & APK DOWNLOADER
+ * Official Gateway Classes Student Study Tracker & Android App Hub
  * Author: Shivansh (@ShivanshSWE-cmd)
  * 
  * Tracks unit-wise progress across 1st, 2nd, 3rd, 4th Year Notes & Video Lectures.
  * Persists in localStorage, provides subject progress bars, floating stats, and dashboard modal.
+ * Includes Android APK download modal & PWA install capabilities.
  */
 
 (function () {
@@ -390,7 +391,7 @@
     if (!btn) {
       btn = document.createElement('div');
       btn.id = 'floatingTrackerBtn';
-      btn.title = 'Open Student Unit Completion Tracker';
+      btn.title = 'Open Student Study Tracker & APK Hub';
       btn.innerHTML = `
         <i class="fa fa-chart-pie"></i>
         <span>My Tracker</span>
@@ -403,6 +404,21 @@
     const count = getCompletedCount();
     const badge = btn.querySelector('.tracker-badge-count');
     if (badge) badge.textContent = count;
+  }
+
+  function ensureFloatingApkButton() {
+    let btn = document.getElementById('floatingApkBtn');
+    if (!btn) {
+      btn = document.createElement('div');
+      btn.id = 'floatingApkBtn';
+      btn.title = 'Download Gateway Classes Android App (APK)';
+      btn.innerHTML = `
+        <i class="fab fa-android"></i>
+        <span>Get APK</span>
+      `;
+      btn.onclick = () => window.openApkModal();
+      document.body.appendChild(btn);
+    }
   }
 
   function updateTopNavPills() {
@@ -470,7 +486,10 @@
             <button type="button" class="btn-reset-tracker" id="resetTrackerBtn">
               <i class="fa fa-trash-alt"></i> Reset All Progress
             </button>
-            <span style="font-size: 11.5px; color: #94a3b8;">Maintained with ❤️ by <b>Shivansh</b> (@ShivanshSWE-cmd)</span>
+            <button type="button" class="nav-apk-btn" onclick="window.openApkModal()">
+              <i class="fab fa-android"></i> 📲 Download Android APK
+            </button>
+            <span style="font-size: 11.5px; color: #94a3b8; width: 100%; text-align: center; margin-top: 6px;">Maintained with ❤️ by <b>Shivansh</b> (@ShivanshSWE-cmd)</span>
           </div>
         </div>
       `;
@@ -622,11 +641,160 @@
     if (backdrop) backdrop.classList.add('active');
   };
 
+  // ============================================================
+  // ANDROID APK DOWNLOAD MODAL & PWA ENGINE
+  // ============================================================
+  let deferredPrompt = null;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    const pwaBtn = document.getElementById('pwaInstallBtn');
+    if (pwaBtn) pwaBtn.style.display = 'inline-flex';
+  });
+
+  function ensureApkModal() {
+    let backdrop = document.getElementById('apkModalBackdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.id = 'apkModalBackdrop';
+      backdrop.className = 'apk-modal-backdrop';
+      backdrop.innerHTML = `
+        <div class="apk-modal-box" role="dialog" aria-modal="true" aria-labelledby="apkModalTitle">
+          <div class="apk-modal-header">
+            <div class="apk-modal-title-group">
+              <div class="apk-modal-logo" aria-hidden="true"><i class="fab fa-android"></i></div>
+              <div>
+                <div class="apk-modal-title" id="apkModalTitle">Gateway Classes App</div>
+                <div class="apk-modal-sub">Official Android APK • Version 2.0 • 7.0 MB</div>
+              </div>
+            </div>
+            <button type="button" class="apk-modal-close" id="closeApkModalBtn" aria-label="Close modal">✕</button>
+          </div>
+
+          <div class="apk-modal-body">
+            <!-- Feature Highlights -->
+            <div class="apk-features-grid">
+              <div class="apk-feature-item"><i class="fa fa-bolt"></i> <span>Offline Handwritten Notes</span></div>
+              <div class="apk-feature-item"><i class="fa fa-play-circle"></i> <span>One-Shot Video Lectures</span></div>
+              <div class="apk-feature-item"><i class="fa fa-file-pdf"></i> <span>1,960+ AKTU Solved PYQs</span></div>
+              <div class="apk-feature-item"><i class="fa fa-check-double"></i> <span>Unit Completion Tracker</span></div>
+            </div>
+
+            <!-- Download Options -->
+            <div class="apk-download-options">
+              
+              <!-- Option 1: Direct APK -->
+              <div class="apk-option-card primary">
+                <div class="apk-option-left">
+                  <div class="apk-option-icon"><i class="fab fa-android"></i></div>
+                  <div class="apk-option-text">
+                    <h4>Direct APK Download (Recommended)</h4>
+                    <p>Instant file download • Works without Google Play login • 7.0 MB</p>
+                  </div>
+                </div>
+                <a href="/download-apk" class="apk-btn-dl-direct" id="directApkDownloadBtn" download="GatewayClasses-AKTU-Notes-v2.0.apk">
+                  <i class="fa fa-download"></i> <span>Download APK</span>
+                </a>
+              </div>
+
+              <!-- Option 2: Google Play Store -->
+              <div class="apk-option-card">
+                <div class="apk-option-left">
+                  <div class="apk-option-icon" style="color: #38bdf8;"><i class="fab fa-google-play"></i></div>
+                  <div class="apk-option-text">
+                    <h4>Google Play Store</h4>
+                    <p>Install the official Gateway Classes app via Google Play</p>
+                  </div>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=co.white.mvxiz" target="_blank" rel="noopener" class="apk-btn-play">
+                  <i class="fab fa-google-play"></i> <span>Open Store ➔</span>
+                </a>
+              </div>
+
+              <!-- Option 3: Instant Web App (PWA) -->
+              <div class="apk-option-card" id="pwaCard">
+                <div class="apk-option-left">
+                  <div class="apk-option-icon" style="color: #fbbf24;"><i class="fa fa-mobile-alt"></i></div>
+                  <div class="apk-option-text">
+                    <h4>Add to Home Screen (Instant App)</h4>
+                    <p>Install full native app experience with zero extra storage used</p>
+                  </div>
+                </div>
+                <button type="button" class="apk-btn-play" id="pwaInstallBtn" onclick="window.triggerPwaInstall()">
+                  <i class="fa fa-plus-circle"></i> <span>Add App</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Installation Guide -->
+            <div class="apk-steps-box">
+              <div class="apk-steps-title">
+                <i class="fa fa-info-circle"></i> How to install the APK on Android:
+              </div>
+              <ol class="apk-steps-list">
+                <li>Tap <strong>Download APK</strong> above to save <code>GatewayClasses-v2.0.apk</code>.</li>
+                <li>When prompted by browser ("File might be harmful"), tap <strong>Download anyway</strong>.</li>
+                <li>Tap the downloaded file notification or find it in your <strong>Downloads</strong> folder.</li>
+                <li>If prompted to allow installation from unknown sources, tap <strong>Settings</strong> and enable <strong>Allow from this source</strong>.</li>
+                <li>Tap <strong>Install</strong> and enjoy complete AKTU notes anytime!</li>
+              </ol>
+            </div>
+
+          </div>
+        </div>
+      `;
+      document.body.appendChild(backdrop);
+
+      // Close handlers
+      backdrop.querySelector('#closeApkModalBtn').addEventListener('click', () => {
+        backdrop.classList.remove('active');
+      });
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) backdrop.classList.remove('active');
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && backdrop.classList.contains('active')) {
+          backdrop.classList.remove('active');
+        }
+      });
+    }
+  }
+
+  window.openApkModal = function () {
+    ensureApkModal();
+    const backdrop = document.getElementById('apkModalBackdrop');
+    if (backdrop) backdrop.classList.add('active');
+  };
+
+  window.triggerPwaInstall = function () {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          showToast('Gateway Classes App successfully added! 🎉', true);
+        }
+        deferredPrompt = null;
+      });
+    } else {
+      showToast('To install: tap the 3 dots (⋮) in your mobile browser and select "Add to Home Screen".', false);
+    }
+  };
+
+  // ── Register PWA Service Worker ──────────────────────────────
+  if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
+  }
+
   // ── Global Update Pipeline ───────────────────────────────────
   function updateAllUI() {
     attachTrackersToNoteCards();
     updateSubjectProgressBars();
     ensureFloatingButton();
+    ensureFloatingApkButton();
     updateTopNavPills();
     updateHomeBanner();
   }
