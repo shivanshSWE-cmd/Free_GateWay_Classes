@@ -39,6 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/global-search.css">
+  <link rel="stylesheet" href="css/student-tracker.css">
 
   <script type="application/ld+json">
   {
@@ -70,20 +71,23 @@
     }
 
     :root {
-      --bg:         #0B132B;
-      --bg2:        #0C1A2B;
-      --card-bg:    #0C1A2B;
-      --card-hover: #132238;
-      --accent:     #B6FF3B;
-      --accent2:    #e4e4e7;
-      --border:     #1A283D;
-      --border-hover: #B6FF3B;
-      --text:       #F8F9FA;
-      --muted:      #94A3B8;
-      --font-head:  'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-body:  'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --r-card:     12px;
-      --safe-b:     env(safe-area-inset-bottom, 0px);
+      --bg:           #070b14;
+      --bg2:          #0a0f1d;
+      --card-bg:      #0f172a;
+      --card-surface: #131f37;
+      --card-hover:   #16233d;
+      --accent:       #f59e0b;
+      --accent2:      #fbbf24;
+      --accent-gold:  #f59e0b;
+      --accent-blue:  #38bdf8;
+      --border:       rgba(245, 158, 11, 0.22);
+      --border-hover: rgba(245, 158, 11, 0.5);
+      --text:         #f8fafc;
+      --muted:        #94a3b8;
+      --font-head:    'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body:    'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --r-card:       14px;
+      --safe-b:       env(safe-area-inset-bottom, 0px);
     }
 
     html {
@@ -218,12 +222,12 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      padding: 5px 14px;
-      border-radius: 6px;
-      background: #0C1A2B;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      font-size: 12px;
-      color: #d4d4d8;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: #111827;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      font-size: 12.5px;
+      color: #cbd5e1;
       font-weight: 500;
       transition: all .2s ease;
     }
@@ -248,10 +252,10 @@
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--r-card);
-      padding: 18px;
+      padding: 20px;
       text-decoration: none;
       color: var(--text);
-      transition: all .2s ease;
+      transition: all .25s ease;
       position: relative;
       box-shadow: 0 4px 14px rgba(0,0,0,0.4);
     }
@@ -273,26 +277,27 @@
     }
 
     .card-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 8px;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 20px;
       flex-shrink: 0;
-      background: #1c1c20;
-      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.05));
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
     }
 
     .card-badge {
-      font-size: 11px;
-      font-weight: 500;
-      padding: 3px 10px;
-      border-radius: 4px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: #132238;
-      color: #d4d4d8;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
       white-space: nowrap;
     }
 
@@ -343,17 +348,20 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 6px;
-      background: #ffffff;
-      color: #0B132B;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #070b14;
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 700;
       white-space: nowrap;
       transition: all .2s ease;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
     }
     .portal-card:hover .card-btn {
-      background: #e4e4e7;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      transform: translateX(2px);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.45);
     }
 
     /* PYQ featured card */
@@ -383,9 +391,10 @@
       color: #ffffff;
       display: inline-block;
       padding: 8px 18px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,.15);
-      background: #0C1A2B;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      background: #0f172a;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
       margin-bottom: 12px;
     }
 
@@ -459,7 +468,7 @@
         </div>
       </a>
       <div class="top-bar-links">
-        <a href="http://localhost:3000" class="nav-api-btn" style="background: #B6FF3B; color: #0B132B; font-weight: 700; border-color: #B6FF3B;"><i class="fa fa-play-circle"></i> AKTU Stream AI</a>
+        <button type="button" class="nav-tracker-btn" onclick="window.openGwcTracker()"><i class="fa fa-chart-pie"></i> 🎯 My Tracker</button>
         <a href="/api-docs.html" class="nav-api-btn"><i class="fa fa-code"></i> API Explorer</a>
         <span class="nav-badge">⚡ AKTU NOTES HUB 2026</span>
       </div>
@@ -484,6 +493,8 @@
         </div>
         <div id="globalSearchResults" class="search-results-dropdown"></div>
       </div>
+      <!-- Student Unit Completion Tracker Hero Widget -->
+      <div id="homeTrackerBanner" class="home-tracker-banner"></div>
     </header>
 
 
@@ -670,5 +681,6 @@
   </script>
   <script src="site-ads.js"></script>
   <script src="js/global-search.js"></script>
+  <script src="js/student-tracker.js"></script>
 </body>
 </html>
