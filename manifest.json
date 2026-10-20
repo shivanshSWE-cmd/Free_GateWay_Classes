@@ -1,0 +1,27 @@
+{
+  "name": "Gateway Classes - AKTU Notes & Study Hub",
+  "short_name": "GatewayClasses",
+  "description": "Download free AKTU B.Tech notes, unit-wise one-shot revision videos, solved PYQ question papers, and track study progress.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "categories": ["education", "books", "productivity"],
+  "icons": [
+    {
+      "src": "https://i.ibb.co/qYC69dyG/Chat-GPT-Image-Aug-6-2026-10-25-09-PM.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://i.ibb.co/qYC69dyG/Chat-GPT-Image-Aug-6-2026-10-25-09-PM.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
