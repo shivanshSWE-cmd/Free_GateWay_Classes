@@ -1421,17 +1421,37 @@
       if (modalAbortCtrl) { try { modalAbortCtrl.abort(); } catch(_) {} }
       modalAbortCtrl = new AbortController();
 
+      const modalCandidates = [
+        pdfUrl,
+        'https://getwayclassesnotes.netlify.app/.netlify/functions/download?' + new URLSearchParams({ id, nonce: nonce || '', code: code || '', title: title || '' }).toString()
+      ];
+
       try {
-        const res = await fetch(pdfUrl, { cache: 'default', signal: modalAbortCtrl.signal });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        let arrayBuffer = null;
+        let lastError = null;
 
-        const arrayBuffer = await res.arrayBuffer();
+        for (const candidateUrl of modalCandidates) {
+          try {
+            const res = await fetch(candidateUrl, { cache: 'default', signal: modalAbortCtrl.signal });
+            if (res.ok) {
+              const buf = await res.arrayBuffer();
+              const header = new Uint8Array(buf.slice(0, 4));
+              const magic = String.fromCharCode(...header);
+              if (magic === '%PDF') {
+                arrayBuffer = buf;
+                break;
+              }
+            }
+          } catch(err) {
+            lastError = err;
+          }
+        }
+
+        if (!arrayBuffer) {
+          throw lastError || new Error('Could not fetch PDF from any mirror');
+        }
+
         currentModalBytes = arrayBuffer;
-
-        const header = new Uint8Array(arrayBuffer.slice(0, 4));
-        const magic = String.fromCharCode(...header);
-        if (magic !== '%PDF') throw new Error('Invalid PDF format received');
-
         modalLoadingText.textContent = 'Rendering Question Paper...';
 
         if (typeof pdfjsLib === 'undefined') {
