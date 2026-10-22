@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Gateway Classes</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: #070b14;
+      color: #f8fafc;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      max-width: 460px;
+      padding: 36px 28px;
+      background: #0f172a;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .icon { font-size: 54px; margin-bottom: 12px; }
+    h1 { font-size: 24px; color: #ffffff; margin-bottom: 8px; }
+    p { font-size: 13.5px; color: #94a3b8; line-height: 1.6; margin-bottom: 22px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 22px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #070b14;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      transition: all .2s;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      transform: translateY(-1px);
+    }
+  </style>
+  <script>
+    // Auto redirect to home if path looks like a root access on Pages
+    if (window.location.pathname.endsWith('/public') || window.location.pathname.endsWith('/public/')) {
+      window.location.replace('index.html');
+    }
+  </script>
+</head>
+<body>
+  <div class="box">
+    <div class="icon">🔍</div>
+    <h1>Page Not Found</h1>
+    <p>The notes, subject or page you are looking for might have been moved or is currently being updated.</p>
+    <a href="index.html" class="btn">🏠 Return to Gateway Classes Portal</a>
+  </div>
+</body>
+</html>
