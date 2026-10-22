@@ -39,14 +39,26 @@
       dropdown.innerHTML = '<div class="search-loading">⚡ Searching across 3,600+ subjects, notes & PYQs...</div>';
 
       debounceTimer = setTimeout(async () => {
+        // 1. Offline in-memory search from pre-bundled search index
+        if (Array.isArray(window.GWC_SEARCH_INDEX) && window.GWC_SEARCH_INDEX.length > 0) {
+          const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+          const matches = window.GWC_SEARCH_INDEX.filter(item => {
+            const blob = `${item.title} ${item.category} ${item.subCategory}`.toLowerCase();
+            return words.every(w => blob.includes(w));
+          }).slice(0, 25);
+          renderResults(matches, query);
+          return;
+        }
+
+        // 2. Fallback to API if index not loaded
         try {
-          const res = await fetch(`/api/search?q=${encodeURIComponent(query)}&limit=20`);
+          const res = await fetch(`/api/search?q=${encodeURIComponent(query)}&limit=25`);
           const data = await res.json();
           renderResults(data.results, query);
         } catch (err) {
-          dropdown.innerHTML = '<div class="search-empty">Search unavailable offline. Enter a specific year portal above.</div>';
+          dropdown.innerHTML = '<div class="search-empty">No notes found or search offline.</div>';
         }
-      }, 200);
+      }, 100);
     });
 
     function getBadgeClass(category) {
@@ -69,10 +81,15 @@
       dropdown.innerHTML = results.map(item => {
         const badgeClass = getBadgeClass(item.category);
         const actionText = item.type === 'video' ? 'Watch ▶' : (item.type === 'pyq' ? 'View Paper 📄' : 'Open PDF ⬇');
-        const targetAttr = item.url.startsWith('/') ? '' : 'target="_blank" rel="noopener"';
+        
+        let targetUrl = item.url || '#';
+        if (targetUrl.startsWith('/') && !targetUrl.includes('.')) {
+          targetUrl = targetUrl.replace(/^\//, '') + '.html';
+        }
+        const targetAttr = (targetUrl.endsWith('.html') || targetUrl.startsWith('#')) ? '' : 'target="_blank" rel="noopener"';
 
         return `
-          <a class="search-item" href="${item.url}" ${targetAttr}>
+          <a class="search-item" href="${targetUrl}" ${targetAttr}>
             <div class="search-item-left">
               <span class="search-item-badge ${badgeClass}">${escapeHtml(item.category)}</span>
               <div class="search-item-info">
