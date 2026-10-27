@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="referrer" content="no-referrer" />
   <title>AKTU BTech 2nd Year Notes & PYQ - Gateway Classes (DSA, OS, COA, DSTL, Maths 4, Python)</title>
   <link rel="stylesheet" href="gwc-ui.css">
   <link rel="stylesheet" href="css/student-tracker.css">
@@ -177,8 +177,7 @@
 (function(){try{var u=location.origin+location.pathname;var c=document.querySelector('link[rel="canonical"]');if(c)c.setAttribute('href',u);var o=document.querySelector('meta[property="og:url"]');if(o)o.setAttribute('content',u);}catch(e){}})();</script>
 <!-- ===== /SEO META ===== -->
 
-  <script src="js/security-shield.js"></script>
-</head>
+  </head>
 <body>
 <a aria-label='Back to Home' href='index.html' id='gwcHomeBtn' title='Back to Home'>🏠 Home</a>
 
@@ -1885,10 +1884,11 @@ DSTL: {
         const targetUnit = btn.dataset.unit;
         const notesGrid = content.querySelector('.notes-grid');
         notesGrid.querySelectorAll('.note-card-link').forEach(noteEl => {
+          const item = noteEl.closest('.note-item-wrapper') || noteEl;
           if (targetUnit === 'all' || noteEl.dataset.unit === targetUnit) {
-            noteEl.style.display = 'flex';
+            item.style.display = 'flex';
           } else {
-            noteEl.style.display = 'none';
+            item.style.display = 'none';
           }
         });
       });
@@ -1906,7 +1906,7 @@ DSTL: {
           const rawTitle = formatLectureTitle(lKey, uKey);
           const icon = getNoteIcon(rawTitle, lKey);
           const isZip = /zip|alllectures/i.test(lKey) || /zip/i.test(uKey) || /zip/i.test(rawTitle);
-          const actionLabel = isZip ? "Open Zip ➔" : "Download ➔";
+          const actionLabel = isZip ? "📂 Open Zip" : "⬇ Download PDF";
           const subType = isZip ? "Combined Zip / Folder" : "Direct PDF";
 
           const noteLink = document.createElement('a');
@@ -1997,13 +1997,14 @@ DSTL: {
       let cardHasMatch = false;
 
       notes.forEach(n => {
+        const item = n.closest('.note-item-wrapper') || n;
         const searchText = n.dataset.search || '';
         if (searchText.includes(q)) {
-          n.style.display = 'flex';
+          item.style.display = 'flex';
           cardHasMatch = true;
           totalMatchedNotes++;
         } else {
-          n.style.display = 'none';
+          item.style.display = 'none';
         }
       });
 

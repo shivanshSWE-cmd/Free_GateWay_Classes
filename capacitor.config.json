@@ -1,5 +1,18 @@
 {
   "appId": "com.gatewayclasses.notes",
   "appName": "Gateway Classes",
-  "webDir": "public"
+  "webDir": "public",
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": [
+      "*.classplus.co",
+      "*.mediafire.com",
+      "*.google.com",
+      "*.googleapis.com",
+      "*.youtube.com",
+      "*.youtu.be",
+      "*.aktuonline.com",
+      "*.github.io"
+    ]
+  }
 }

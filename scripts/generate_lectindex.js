@@ -2,71 +2,96 @@ const fs = require('fs');
 const path = require('path');
 
 const lecturesData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'lectures.json'), 'utf-8'));
+const totalCourses = lecturesData.courses.length;
 
 const htmlContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="referrer" content="no-referrer-when-downgrade" />
-  <title>AKTU BTech Video Lectures Hub — Unit-Wise One-Shots & Playlists</title>
+  <meta name="referrer" content="no-referrer">
+  <title>AKTU BTech Video Lectures Hub — All 4 Years & 8 Semesters (Unit-Wise One-Shots)</title>
   <link rel="stylesheet" href="gwc-ui.css">
+  <link rel="stylesheet" href="css/student-tracker.css">
   <link rel="icon" href="https://i.ibb.co/qYC69dyG/Chat-GPT-Image-Aug-6-2026-10-25-09-PM.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <meta name="description" content="Watch free AKTU B.Tech unit-wise one-shot revision video lectures and full course playlists by AH Tutorials and MultiAtoms for CSE, IT, AIML, and all branches.">
-  <meta name="keywords" content="ah tutorials aktu, multiatoms aktu, aktu one shot video, dsa one shot aktu, coa one shot aktu, dstl one shot aktu, daa one shot aktu, os one shot aktu, java one shot aktu">
+  <meta name="description" content="Watch free AKTU B.Tech unit-wise one-shot revision video lectures and full course playlists by AH Tutorials, MultiAtoms, and Gateway Classes for all 4 years and 8 semesters.">
+  <meta name="keywords" content="ah tutorials aktu, multiatoms aktu, aktu one shot video, dsa one shot aktu, coa one shot aktu, dstl one shot aktu, daa one shot aktu, os one shot aktu, java one shot aktu, aktu 4th year video, aktu 3rd year video">
   <meta name="author" content="Shivansh (@ShivanshSWE-cmd)">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#070b14">
 
   <style>
-    /* Classic Black & White Video Hub Styles */
-    .channel-tabs {
+    /* Classic Dark Video Hub Styles */
+    .filter-group-wrap {
       display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      padding: 10px 0 16px;
-      margin-bottom: 8px;
-      scrollbar-width: none;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
     }
-    .channel-tabs::-webkit-scrollbar { display: none; }
 
-    .channel-btn {
-      display: inline-flex;
+    .filter-label-row {
+      display: flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .pills-scroll-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .pills-scroll-row::-webkit-scrollbar { display: none; }
+
+    .filter-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 15px;
       border-radius: 999px;
       background: #121214;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #a1a1aa;
-      font-size: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #94a3b8;
+      font-size: 12.5px;
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
       transition: all 0.2s ease;
+      user-select: none;
     }
-    .channel-btn:hover {
-      border-color: rgba(255, 255, 255, 0.4);
+    .filter-pill-btn:hover {
+      border-color: rgba(245, 158, 11, 0.5);
       color: #ffffff;
       transform: translateY(-1px);
     }
-    .channel-btn.active {
-      background: #ffffff;
-      color: #000000;
-      border-color: #ffffff;
+    .filter-pill-btn.active {
+      background: #f59e0b;
+      color: #070b14;
+      border-color: #f59e0b;
+      font-weight: 700;
+      box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35);
     }
 
     .subject-card {
-      background: #121214;
+      background: #0f172a;
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 12px;
       margin-bottom: 16px;
       overflow: hidden;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
     }
     .subject-card:hover {
-      border-color: rgba(255, 255, 255, 0.35);
+      border-color: rgba(245, 158, 11, 0.4);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
     .card-top-bar {
@@ -74,7 +99,7 @@ const htmlContent = `<!DOCTYPE html>
       align-items: center;
       justify-content: space-between;
       padding: 16px 20px;
-      background: #141417;
+      background: #141c30;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       flex-wrap: wrap;
       gap: 12px;
@@ -83,27 +108,30 @@ const htmlContent = `<!DOCTYPE html>
     .card-title-group {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
+      flex: 1;
+      min-width: 250px;
     }
 
     .card-subj-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 8px;
-      background: #1c1c20;
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #1c2744;
+      border: 1px solid rgba(245, 158, 11, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
+      font-size: 22px;
       flex-shrink: 0;
     }
 
     .card-subj-details h2 {
-      font-size: 16px;
+      font-size: 16.5px;
       font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 3px;
+      color: #f8fafc;
+      margin-bottom: 4px;
+      line-height: 1.3;
     }
 
     .card-meta-tags {
@@ -115,51 +143,66 @@ const htmlContent = `<!DOCTYPE html>
 
     .badge-channel {
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       padding: 2px 8px;
       border-radius: 4px;
-      background: #27272a;
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.18);
       color: #fafafa;
     }
     .badge-ah {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.3);
-      color: #ffffff;
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
     }
     .badge-ma {
-      background: #18181b;
-      border-color: rgba(255, 255, 255, 0.2);
-      color: #e4e4e7;
+      background: rgba(14, 165, 233, 0.15);
+      border-color: rgba(14, 165, 233, 0.4);
+      color: #7dd3fc;
+    }
+    .badge-gwc {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: rgba(245, 158, 11, 0.4);
+      color: #fcd34d;
+    }
+
+    .badge-sem {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
     }
 
     .badge-code {
       font-size: 11px;
-      color: #a1a1aa;
+      color: #94a3b8;
     }
 
     .card-actions-top {
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn-playlist {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 14px;
+      padding: 7px 15px;
       border-radius: 6px;
-      background: #ffffff;
-      color: #000000;
-      font-size: 12px;
-      font-weight: 600;
+      background: #f59e0b;
+      color: #070b14;
+      font-size: 12.5px;
+      font-weight: 700;
       text-decoration: none;
       transition: all 0.2s ease;
       white-space: nowrap;
     }
     .btn-playlist:hover {
-      background: #e4e4e7;
+      background: #fbbf24;
       transform: translateY(-1px);
     }
 
@@ -167,7 +210,7 @@ const htmlContent = `<!DOCTYPE html>
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 14px;
+      padding: 7px 14px;
       border-radius: 6px;
       background: #18181b;
       border: 1px solid rgba(255, 255, 255, 0.25);
@@ -186,10 +229,10 @@ const htmlContent = `<!DOCTYPE html>
 
     .units-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 10px;
       padding: 16px 20px 20px;
-      background: #0d0d0f;
+      background: #090e1a;
     }
 
     .unit-video-btn {
@@ -198,27 +241,29 @@ const htmlContent = `<!DOCTYPE html>
       justify-content: space-between;
       padding: 11px 14px;
       border-radius: 8px;
-      background: #18181b;
+      background: #131b2e;
       border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #fafafa;
+      color: #f8fafc;
       text-decoration: none;
       font-size: 13px;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.2s ease;
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
     }
     .unit-video-btn:hover {
-      background: #ffffff;
-      color: #000000;
-      border-color: #ffffff;
+      background: #1c2744;
+      border-color: #f59e0b;
       transform: translateY(-1px);
     }
     .unit-video-btn:hover .unit-tag {
-      background: #000000;
-      color: #ffffff;
+      background: #f59e0b;
+      color: #070b14;
     }
     .unit-video-btn:hover .watch-icon {
-      color: #000000;
+      color: #f59e0b;
     }
 
     .unit-info {
@@ -234,8 +279,8 @@ const htmlContent = `<!DOCTYPE html>
       font-weight: 700;
       padding: 3px 6px;
       border-radius: 4px;
-      background: #27272a;
-      color: #e4e4e7;
+      background: #1e293b;
+      color: #e2e8f0;
       white-space: nowrap;
       transition: all 0.2s;
     }
@@ -249,7 +294,7 @@ const htmlContent = `<!DOCTYPE html>
 
     .watch-icon {
       font-size: 12px;
-      color: #a1a1aa;
+      color: #94a3b8;
       margin-left: 8px;
       white-space: nowrap;
     }
@@ -259,7 +304,7 @@ const htmlContent = `<!DOCTYPE html>
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0, 0, 0, 0.88);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       z-index: 10000;
@@ -274,8 +319,8 @@ const htmlContent = `<!DOCTYPE html>
     .video-modal-box {
       width: 100%;
       max-width: 900px;
-      background: #121214;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: #0f172a;
+      border: 1px solid rgba(245, 158, 11, 0.35);
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
@@ -288,7 +333,7 @@ const htmlContent = `<!DOCTYPE html>
       align-items: center;
       justify-content: space-between;
       padding: 12px 18px;
-      background: #18181b;
+      background: #141c30;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .video-modal-title {
@@ -303,7 +348,7 @@ const htmlContent = `<!DOCTYPE html>
     .video-modal-close {
       background: transparent;
       border: none;
-      color: #a1a1aa;
+      color: #94a3b8;
       font-size: 20px;
       cursor: pointer;
       line-height: 1;
@@ -332,8 +377,8 @@ const htmlContent = `<!DOCTYPE html>
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 18px;
-      background: #141417;
+      padding: 12px 18px;
+      background: #141c30;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       flex-wrap: wrap;
       gap: 10px;
@@ -345,52 +390,91 @@ const htmlContent = `<!DOCTYPE html>
       gap: 6px;
       padding: 6px 14px;
       border-radius: 6px;
-      background: #ffffff;
-      color: #000000;
+      background: #f59e0b;
+      color: #070b14;
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       transition: all 0.2s ease;
     }
     .video-modal-yt-btn:hover {
-      background: #e4e4e7;
+      background: #fbbf24;
+    }
+
+    @media (max-width: 640px) {
+      .units-grid {
+        grid-template-columns: 1fr;
+        padding: 12px;
+      }
+      .card-top-bar {
+        padding: 12px 14px;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- Top Navigation Home Link -->
-  <a href="/" id="gwcHomeBtn">← Home</a>
+  <a href="index.html" id="gwcHomeBtn">← Home</a>
 
   <!-- Header Section -->
   <header class="hub-header">
-    <span class="badge-pill">🎬 AKTU VIDEO LECTURES HUB</span>
+    <span class="badge-pill">🎬 ALL 4 YEARS & 8 SEMESTERS</span>
     <h1>AKTU B.TECH VIDEO LECTURES</h1>
     <p class="hub-subtitle">
       Unit-wise One-Shot revision videos & complete subject playlists by <b>AH Tutorials</b> (@AHTUTORIALS2024), <b>MultiAtoms</b>, and <b>Gateway Classes</b>. Curated & maintained by <b>Shivansh</b>.
     </p>
     <div class="stats-row">
+      <span class="stat-chip"><i class="fa fa-layer-group"></i> All 8 Semesters</span>
       <span class="stat-chip"><i class="fa fa-play-circle"></i> Unit 1 to 5 One-Shots</span>
       <span class="stat-chip"><i class="fab fa-youtube"></i> Full YouTube Playlists</span>
-      <span class="stat-chip"><i class="fa fa-graduation-cap"></i> 28 Core Courses</span>
+      <span class="stat-chip"><i class="fa fa-graduation-cap"></i> ${totalCourses} Core Courses</span>
     </div>
   </header>
 
   <div class="main-wrap">
 
-    <!-- Search Section -->
+    <!-- Search & Filters Section -->
     <div class="search-filter-section">
       <div class="search-box-wrapper">
         <span class="search-icon"><i class="fa fa-search"></i></span>
-        <input type="text" id="noteSearch" placeholder="Search subject, course code, unit, or channel (e.g. DAA, OS, Java, COA, AH Tutorials, MultiAtoms)..." autocomplete="off" />
+        <input type="text" id="noteSearch" placeholder="Search any course, unit, code, or channel (e.g. AI, Deep Learning, DAA, OS, Cloud, BEE, Java)..." autocomplete="off" />
         <button id="clearSearch" class="clear-btn" style="display:none;" title="Clear search">✕</button>
       </div>
 
-      <!-- Channel Tabs Filter -->
-      <div class="channel-tabs" id="channelTabs">
-        <button class="channel-btn active" data-channel="all">🎬 All Channels (${lecturesData.courses.length})</button>
-        <button class="channel-btn" data-channel="ah-tutorials">🔥 AH Tutorials (${lecturesData.courses.filter(c => c.channelId === 'ah-tutorials').length})</button>
-        <button class="channel-btn" data-channel="multiatoms">⚛️ MultiAtoms (${lecturesData.courses.filter(c => c.channelId === 'multiatoms').length})</button>
+      <div class="filter-group-wrap">
+        <!-- 1. Year Filter -->
+        <div class="filter-label-row"><i class="fa fa-calendar-alt"></i> Filter by Year:</div>
+        <div class="pills-scroll-row" id="yearTabs">
+          <button class="filter-pill-btn active" data-year="all">🎓 All Years (${totalCourses})</button>
+          <button class="filter-pill-btn" data-year="1st Year">1st Year (${lecturesData.courses.filter(c => c.year === '1st Year').length})</button>
+          <button class="filter-pill-btn" data-year="2nd Year">2nd Year (${lecturesData.courses.filter(c => c.year === '2nd Year').length})</button>
+          <button class="filter-pill-btn" data-year="3rd Year">3rd Year (${lecturesData.courses.filter(c => c.year === '3rd Year').length})</button>
+          <button class="filter-pill-btn" data-year="4th Year">4th Year (${lecturesData.courses.filter(c => c.year === '4th Year').length})</button>
+        </div>
+
+        <!-- 2. Semester Filter -->
+        <div class="filter-label-row"><i class="fa fa-clock"></i> Filter by Semester:</div>
+        <div class="pills-scroll-row" id="semTabs">
+          <button class="filter-pill-btn active" data-sem="all">All Semesters</button>
+          <button class="filter-pill-btn" data-sem="1">Sem 1</button>
+          <button class="filter-pill-btn" data-sem="2">Sem 2</button>
+          <button class="filter-pill-btn" data-sem="3">Sem 3</button>
+          <button class="filter-pill-btn" data-sem="4">Sem 4</button>
+          <button class="filter-pill-btn" data-sem="5">Sem 5</button>
+          <button class="filter-pill-btn" data-sem="6">Sem 6</button>
+          <button class="filter-pill-btn" data-sem="7">Sem 7</button>
+          <button class="filter-pill-btn" data-sem="8">Sem 8</button>
+        </div>
+
+        <!-- 3. Channel Filter -->
+        <div class="filter-label-row"><i class="fab fa-youtube"></i> Filter by Channel:</div>
+        <div class="pills-scroll-row" id="channelTabs">
+          <button class="filter-pill-btn active" data-channel="all">🎬 All Channels (${totalCourses})</button>
+          <button class="filter-pill-btn" data-channel="ah-tutorials">🔥 AH Tutorials (${lecturesData.courses.filter(c => c.channelId === 'ah-tutorials').length})</button>
+          <button class="filter-pill-btn" data-channel="multiatoms">⚛️ MultiAtoms (${lecturesData.courses.filter(c => c.channelId === 'multiatoms').length})</button>
+          <button class="filter-pill-btn" data-channel="gateway-classes">⚡ Gateway Classes (${lecturesData.courses.filter(c => c.channelId === 'gateway-classes').length})</button>
+        </div>
       </div>
 
       <!-- Quick Subject Chips -->
@@ -408,7 +492,7 @@ const htmlContent = `<!DOCTYPE html>
     <div id="noResults" class="no-results" style="display:none; text-align:center; padding:40px 20px;">
       <span style="font-size:32px;">🎬</span>
       <p style="font-size:15px; font-weight:600; color:#fff; margin-top:8px;">No video lectures found!</p>
-      <p style="font-size:13px; color:#a1a1aa;">Try searching with a different subject name, unit, or clear search filter.</p>
+      <p style="font-size:13px; color:#a1a1aa;">Try searching with a different subject name, unit, or clear filters.</p>
     </div>
 
   </div>
@@ -424,9 +508,9 @@ const htmlContent = `<!DOCTYPE html>
         <iframe id="videoIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="video-modal-footer">
-        <span style="font-size:12px; color:#a1a1aa;" id="modalVideoChannel">Channel: AH Tutorials</span>
+        <span style="font-size:12px; color:#cbd5e1;" id="modalVideoChannel">Channel: AH Tutorials</span>
         <a href="#" target="_blank" rel="noopener" class="video-modal-yt-btn" id="modalExternalYtBtn">
-          <i class="fab fa-youtube"></i> Open on YouTube
+          <i class="fab fa-youtube"></i> Open on YouTube ↗
         </a>
       </div>
     </div>
@@ -449,6 +533,8 @@ const htmlContent = `<!DOCTYPE html>
     const courses = database.courses;
 
     const coursesListEl = document.getElementById('coursesList');
+    const yearTabsEl = document.getElementById('yearTabs');
+    const semTabsEl = document.getElementById('semTabs');
     const channelTabsEl = document.getElementById('channelTabs');
     const subjectChipsEl = document.getElementById('subjectChips');
     const searchInput = document.getElementById('noteSearch');
@@ -465,6 +551,8 @@ const htmlContent = `<!DOCTYPE html>
     const modalExternalYtBtn = document.getElementById('modalExternalYtBtn');
     const closeVideoModal = document.getElementById('closeVideoModal');
 
+    let activeYear = 'all';
+    let activeSem = 'all';
     let activeChannel = 'all';
     let searchQuery = '';
     let allExpanded = false;
@@ -519,17 +607,19 @@ const htmlContent = `<!DOCTYPE html>
       subjectChipsEl.innerHTML = '';
       const chips = [
         { label: 'All Subjects', q: '' },
-        { label: 'DAA', q: 'DAA' },
-        { label: 'Operating Systems', q: 'Operating' },
-        { label: 'OOP Java', q: 'Java' },
-        { label: 'COA', q: 'COA' },
-        { label: 'DSTL', q: 'DSTL' },
-        { label: 'DSA', q: 'Data Structures' },
-        { label: 'Python', q: 'Python' },
-        { label: 'DBMS', q: 'DBMS' },
-        { label: 'Compiler Design', q: 'Compiler' },
-        { label: 'Cyber Security', q: 'Cyber' },
-        { label: 'Web Technology', q: 'Web' }
+        { label: '🤖 AI', q: 'Artificial Intelligence' },
+        { label: '🧠 Deep Learning', q: 'Deep Learning' },
+        { label: '☁️ Cloud', q: 'Cloud Computing' },
+        { label: '🔗 Blockchain', q: 'Blockchain' },
+        { label: '🌐 Web Tech', q: 'Web Tech' },
+        { label: '💻 DAA', q: 'DAA' },
+        { label: '⚡ BEE', q: 'Electrical' },
+        { label: '🔢 Maths 1/2', q: 'Mathematics' },
+        { label: '🖥️ OS', q: 'Operating' },
+        { label: '☕ Java', q: 'Java' },
+        { label: '🏗️ DSA', q: 'Data Structures' },
+        { label: '🖧 Networks', q: 'Networks' },
+        { label: '🛡️ Cyber', q: 'Cyber' }
       ];
 
       chips.forEach((c, idx) => {
@@ -556,9 +646,14 @@ const htmlContent = `<!DOCTYPE html>
         card.className = 'subject-card';
         card.dataset.id = c.id;
         card.dataset.channel = c.channelId;
-        card.dataset.search = (c.title + ' ' + c.code + ' ' + c.channelName + ' ' + (c.units ? c.units.map(u => u.title).join(' ') : '')).toLowerCase();
+        card.dataset.year = c.year;
+        card.dataset.sem = String(c.semester || '');
+        card.dataset.search = (c.title + ' ' + c.code + ' ' + c.channelName + ' sem' + c.semester + ' ' + c.year + ' ' + (c.units ? c.units.map(u => u.title).join(' ') : '')).toLowerCase();
 
-        const channelBadgeClass = c.channelId === 'ah-tutorials' ? 'badge-ah' : 'badge-ma';
+        let badgeClass = 'badge-channel';
+        if (c.channelId === 'ah-tutorials') badgeClass += ' badge-ah';
+        else if (c.channelId === 'multiatoms') badgeClass += ' badge-ma';
+        else badgeClass += ' badge-gwc';
 
         card.innerHTML = \`
           <div class="card-top-bar">
@@ -567,8 +662,9 @@ const htmlContent = `<!DOCTYPE html>
               <div class="card-subj-details">
                 <h2>\${c.title}</h2>
                 <div class="card-meta-tags">
-                  <span class="badge-channel \${channelBadgeClass}">\${c.channelBadge || c.channelName}</span>
-                  <span class="badge-code">\${c.code} • \${c.year || 'AKTU B.Tech'}</span>
+                  <span class="\${badgeClass}">\${c.channelBadge || c.channelName}</span>
+                  <span class="badge-sem">Semester \${c.semester}</span>
+                  <span class="badge-code">\${c.code} • \${c.year}</span>
                 </div>
               </div>
             </div>
@@ -583,7 +679,7 @@ const htmlContent = `<!DOCTYPE html>
             \${(c.units || []).map(u => {
               const url = u.url || c.playlistUrl;
               return \`
-                <div class="unit-video-btn" onclick="openVideo('\${c.title} - \${u.title}', '\${url}', '\${c.channelName}')">
+                <div class="unit-video-btn" onclick="openVideo('\${c.title.replace(/'/g, "\\\\\\'")} - \${u.title.replace(/'/g, "\\\\\\'")} ', '\${url}', '\${c.channelName}')">
                   <div class="unit-info">
                     <span class="unit-tag">\${u.unit}</span>
                     <span class="unit-name" title="\${u.title}">\${u.title}</span>
@@ -604,10 +700,12 @@ const htmlContent = `<!DOCTYPE html>
       const cards = coursesListEl.querySelectorAll('.subject-card');
 
       cards.forEach(card => {
+        const matchesYear = activeYear === 'all' || card.dataset.year === activeYear;
+        const matchesSem = activeSem === 'all' || card.dataset.sem === activeSem;
         const matchesChannel = activeChannel === 'all' || card.dataset.channel === activeChannel;
         const matchesSearch = !searchQuery || card.dataset.search.includes(searchQuery);
 
-        if (matchesChannel && matchesSearch) {
+        if (matchesYear && matchesSem && matchesChannel && matchesSearch) {
           card.style.display = 'block';
           visibleCount++;
         } else {
@@ -624,11 +722,31 @@ const htmlContent = `<!DOCTYPE html>
       }
     }
 
+    // Year Tabs
+    yearTabsEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-pill-btn');
+      if (!btn) return;
+      yearTabsEl.querySelectorAll('.filter-pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeYear = btn.dataset.year;
+      filterCourses();
+    });
+
+    // Sem Tabs
+    semTabsEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-pill-btn');
+      if (!btn) return;
+      semTabsEl.querySelectorAll('.filter-pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSem = btn.dataset.sem;
+      filterCourses();
+    });
+
     // Channel Tabs
     channelTabsEl.addEventListener('click', (e) => {
-      const btn = e.target.closest('.channel-btn');
+      const btn = e.target.closest('.filter-pill-btn');
       if (!btn) return;
-      channelTabsEl.querySelectorAll('.channel-btn').forEach(b => b.classList.remove('active'));
+      channelTabsEl.querySelectorAll('.filter-pill-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       activeChannel = btn.dataset.channel;
       filterCourses();
@@ -664,9 +782,12 @@ const htmlContent = `<!DOCTYPE html>
     filterCourses();
   </script>
 
+  <script src="site-ads.js"></script>
+  <script src="js/student-tracker.js"></script>
+
 </body>
 </html>
 `;
 
 fs.writeFileSync(path.join(__dirname, '..', 'public', 'lectindex.html'), htmlContent, 'utf-8');
-console.log('✓ public/lectindex.html successfully updated with AH Tutorials and MultiAtoms unit-wise one-shots & playlists!');
+console.log(`✓ public/lectindex.html successfully updated with all ${totalCourses} courses across all 8 semesters!`);

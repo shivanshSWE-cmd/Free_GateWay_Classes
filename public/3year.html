@@ -6,7 +6,7 @@
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="referrer" content="no-referrer-when-downgrade" />
+<meta name="referrer" content="no-referrer" />
 <title>AKTU BTech 3rd Year Notes & PYQ - Gateway Classes (Web Tech, DBMS, DAA, ML)</title>
   <link rel="stylesheet" href="gwc-ui.css">
   <link rel="stylesheet" href="css/student-tracker.css">
@@ -253,8 +253,7 @@
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="js/security-shield.js"></script>
-</head>
+  </head>
 <body>
 <a aria-label='Back to Home' href='index.html' id='gwcHomeBtn' title='Back to Home'>🏠 Home</a>
 
@@ -445,10 +444,11 @@
           const target = btn.dataset.unit;
           const grid = content.querySelector('.notes-grid');
           grid.querySelectorAll('.note-card-link').forEach(linkEl => {
+            const item = linkEl.closest('.note-item-wrapper') || linkEl;
             if (target === 'all' || linkEl.dataset.unit === target) {
-              linkEl.style.display = 'flex';
+              item.style.display = 'flex';
             } else {
-              linkEl.style.display = 'none';
+              item.style.display = 'none';
             }
           });
         });
@@ -477,7 +477,7 @@
               <span class="note-sub">${meta.title} • ${nMeta.unit}</span>
             </div>
           </div>
-          <span class="note-open-badge">Download ➔</span>
+          <span class="note-open-badge">⬇ Download PDF</span>
         `;
         notesGrid.appendChild(link);
       });

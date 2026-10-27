@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="referrer" content="no-referrer" />
   <meta name="robots" content="noindex, nofollow">
   <title id="pageTitle">AKTU B.Tech Question Paper - Gateway Classes</title>
   <link rel="stylesheet" href="gwc-ui.css">
@@ -777,7 +777,23 @@
             lastErr = err;
           }
         }
-        throw lastErr || new Error('Question paper temporarily unavailable. Please retry.');
+        // If all serverless candidates fail, provide fallback
+        const searchFallback = 'https://www.google.com/search?q=AKTU+' + encodeURIComponent((code || '') + ' ' + (title || 'paper') + ' question paper pdf download');
+        const fallbackBtn = document.getElementById('errorSearchBtn');
+        if (!fallbackBtn) {
+          const errBox = document.getElementById('errorState');
+          if (errBox) {
+            const btn = document.createElement('a');
+            btn.id = 'errorSearchBtn';
+            btn.href = searchFallback;
+            btn.target = '_blank';
+            btn.rel = 'noopener';
+            btn.style.cssText = 'display:inline-block;margin-top:14px;padding:8px 18px;background:#f59e0b;color:#000;font-weight:700;border-radius:6px;text-decoration:none;';
+            btn.textContent = '🔍 Download from AKTU Search ➔';
+            errBox.appendChild(btn);
+          }
+        }
+        throw lastErr || new Error('Direct streaming proxy is busy. Use the link below to download directly.');
       }
 
       // Direct Download Function

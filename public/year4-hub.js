@@ -70,7 +70,7 @@
         title.textContent = note.title;
         const action = document.createElement("span");
         action.className = "download";
-        action.textContent = "OPEN";
+        action.textContent = "⬇ Download PDF";
         link.append(title, action);
         notesGrid.appendChild(link);
       });

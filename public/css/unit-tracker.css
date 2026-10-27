@@ -222,6 +222,39 @@
 }
 
 /* ── Unit Card / Note Checkbox Button ───────────────────────── */
+.note-item-wrapper,
+.video-item-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .note-item-wrapper {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+  .note-item-wrapper .note-card-link {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+  .unit-check-btn {
+    align-self: flex-end;
+    margin-left: auto;
+  }
+}
+
+.note-item-wrapper .note-card-link,
+.note-item-wrapper .note,
+.video-item-wrapper .unit-video-btn {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
 .unit-check-btn {
   display: inline-flex;
   align-items: center;
