@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Gateway Classes</string>
+    <string name="title_activity_main">Gateway Classes</string>
+    <string name="package_name">com.gatewayclasses.notes</string>
+    <string name="custom_url_scheme">com.gatewayclasses.notes</string>
+</resources>

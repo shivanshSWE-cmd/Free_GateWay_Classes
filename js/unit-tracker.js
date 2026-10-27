@@ -163,13 +163,19 @@
         updateAllUI();
       });
 
-      // Insert button right before the open badge or at the end
-      const openBadge = link.querySelector('.note-open-badge');
-      if (openBadge) {
-        link.insertBefore(checkBtn, openBadge);
-      } else {
-        link.appendChild(checkBtn);
+      // Wrap link with a dedicated row wrapper so interactive elements don't nest illegally
+      let wrapper = link.parentElement;
+      if (!wrapper || !wrapper.classList.contains('note-item-wrapper')) {
+        wrapper = document.createElement('div');
+        wrapper.className = 'note-item-wrapper';
+        if (link.dataset.group) wrapper.dataset.group = link.dataset.group;
+        if (link.dataset.unit) wrapper.dataset.unit = link.dataset.unit;
+        if (link.dataset.subject) wrapper.dataset.subject = link.dataset.subject;
+        if (link.dataset.search) wrapper.dataset.search = link.dataset.search;
+        link.parentNode.insertBefore(wrapper, link);
+        wrapper.appendChild(link);
       }
+      wrapper.appendChild(checkBtn);
     });
 
     // 2. Video Lecture Hub (.unit-video-btn) in lectindex.html
@@ -222,12 +228,14 @@
         updateAllUI();
       });
 
-      const watchIcon = btn.querySelector('.watch-icon');
-      if (watchIcon) {
-        btn.insertBefore(checkBtn, watchIcon);
-      } else {
-        btn.appendChild(checkBtn);
+      let wrapper = btn.parentElement;
+      if (!wrapper || !wrapper.classList.contains('video-item-wrapper')) {
+        wrapper = document.createElement('div');
+        wrapper.className = 'video-item-wrapper';
+        btn.parentNode.insertBefore(wrapper, btn);
+        wrapper.appendChild(btn);
       }
+      wrapper.appendChild(checkBtn);
     });
 
     // 3. 4th Year Hub (.note) in 4year.html
@@ -279,12 +287,14 @@
         updateAllUI();
       });
 
-      const dlSpan = link.querySelector('.download');
-      if (dlSpan) {
-        link.insertBefore(checkBtn, dlSpan);
-      } else {
-        link.appendChild(checkBtn);
+      let wrapper = link.parentElement;
+      if (!wrapper || !wrapper.classList.contains('note-item-wrapper')) {
+        wrapper = document.createElement('div');
+        wrapper.className = 'note-item-wrapper';
+        link.parentNode.insertBefore(wrapper, link);
+        wrapper.appendChild(link);
       }
+      wrapper.appendChild(checkBtn);
     });
   }
 
@@ -809,6 +819,32 @@
       observer.observe(t, { childList: true, subtree: true });
     });
   }
+
+  
+  // ── Global Download & External Link Interceptor for Android APK & Mobile Browsers ──
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (!link || !link.href) return;
+    const href = link.href;
+
+    const isDownloadUrl = href.includes('mediafire.com') ||
+                          href.includes('drive.google.com') ||
+                          href.includes('classplus.co') ||
+                          href.includes('.pdf') ||
+                          link.hasAttribute('download');
+
+    if (isDownloadUrl) {
+      // Ensure target="_blank" and rel="noopener"
+      link.target = '_blank';
+      link.rel = 'noopener';
+
+      // If inside Capacitor / Android App WebView, invoke system browser/intent
+      if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.App) {
+        // Let Capacitor handle external intent
+        link.target = '_system';
+      }
+    }
+  }, true);
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

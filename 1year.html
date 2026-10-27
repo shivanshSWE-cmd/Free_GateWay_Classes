@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="referrer" content="no-referrer" />
   <title>AKTU BTech 1st Year Notes & PYQ - Gateway Classes (Maths, Physics, Chemistry, BEE, PPS)</title>
   <link rel="stylesheet" href="gwc-ui.css">
   <link rel="stylesheet" href="css/student-tracker.css">
@@ -172,8 +172,7 @@
 <!-- ===== /SEO META ===== -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="js/security-shield.js"></script>
-</head>
+  </head>
 <body>
 <a aria-label='Back to Home' href='index.html' id='gwcHomeBtn' title='Back to Home'>🏠 Home</a>
 
@@ -821,10 +820,11 @@ lec2: "https://www.mediafire.com/file/s72b4dplkq7i81w/PHYSICS_U-5_PART-II_NANO_M
         const targetGroup = btn.dataset.group;
         const notesGrid = content.querySelector('.notes-grid');
         notesGrid.querySelectorAll('.note-card-link').forEach(noteEl => {
+          const item = noteEl.closest('.note-item-wrapper') || noteEl;
           if (targetGroup === 'all' || noteEl.dataset.group === targetGroup) {
-            noteEl.style.display = 'flex';
+            item.style.display = 'flex';
           } else {
-            noteEl.style.display = 'none';
+            item.style.display = 'none';
           }
         });
       });
@@ -840,7 +840,7 @@ lec2: "https://www.mediafire.com/file/s72b4dplkq7i81w/PHYSICS_U-5_PART-II_NANO_M
         const isZip = /zip|alllectures/i.test(n.key) || /zip/i.test(n.group);
         const typeTag = isZip ? "MediaFire Zip Folder" : "Direct PDF";
         const subLabel = n.subGroup ? `${groupLabel} • ${formatCategoryName(n.subGroup)}` : `${groupLabel} • ${typeTag}`;
-        const actionLabel = isZip ? "Open Zip ➔" : "Download ➔";
+        const actionLabel = isZip ? "📂 Open Zip" : "⬇ Download PDF";
 
         const noteLink = document.createElement('a');
         noteLink.href = n.url;
@@ -929,13 +929,14 @@ lec2: "https://www.mediafire.com/file/s72b4dplkq7i81w/PHYSICS_U-5_PART-II_NANO_M
       let cardHasMatch = false;
 
       notes.forEach(n => {
+        const item = n.closest('.note-item-wrapper') || n;
         const searchText = n.dataset.search || '';
         if (searchText.includes(q)) {
-          n.style.display = 'flex';
+          item.style.display = 'flex';
           cardHasMatch = true;
           totalMatchedNotes++;
         } else {
-          n.style.display = 'none';
+          item.style.display = 'none';
         }
       });
 

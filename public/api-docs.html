@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="referrer" content="no-referrer">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AKTU Notes Portal — REST API Documentation</title>
+  <link rel="icon" href="https://i.ibb.co/qYC69dyG/Chat-GPT-Image-Aug-6-2026-10-25-09-PM.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #070b14;
+      --card-bg: #0f172a;
+      --accent: #f59e0b;
+      --accent2: #fbbf24;
+      --border: rgba(245, 158, 11, 0.22);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --font-head: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      padding: 20px 16px 60px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 20px 0 30px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(30, 58, 138, 0.35));
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .brand-title {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+    .btn-back {
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid #ffffff;
+      color: #000000;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-back:hover {
+      background: #e4e4e7;
+    }
+    .hero-banner {
+      margin: 30px 0;
+      background: linear-gradient(135deg, rgba(0,234,255,0.06), rgba(0,255,204,0.03));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px 24px;
+      position: relative;
+    }
+    .hero-banner h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .hero-banner p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+    .stats-row {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .stat-pill {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #cbd5e1;
+    }
+    .stat-pill b {
+      color: var(--accent);
+      font-family: var(--font-head);
+    }
+    .section-title {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+    }
+    .api-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s;
+    }
+    .api-card:hover {
+      border-color: rgba(0,234,255,0.5);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .endpoint-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .method-get {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #10b981;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .endpoint-path {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .endpoint-desc {
+      color: var(--muted);
+      font-size: 13.5px;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .code-block {
+      background: #02050e;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: #38bdf8;
+      overflow-x: auto;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-try {
+      padding: 6px 14px;
+      background: #ffffff;
+      border: 1px solid #ffffff;
+      color: #000000;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-try:hover {
+      background: #e4e4e7;
+    }
+    .response-preview {
+      display: none;
+      background: #050a18;
+      border: 1px solid rgba(0,234,255,0.2);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 10px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: #a7f3d0;
+      max-height: 220px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+  <script src="js/security-shield.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/" class="brand">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-title">AKTU NOTES REST API</div>
+      </a>
+      <a href="/" class="btn-back"><i class="fa fa-arrow-left"></i> Back to Portal</a>
+    </header>
+
+    <div class="hero-banner">
+      <h1>Developer REST API Documentation</h1>
+      <p>High-performance backend API powering Gateway Classes & MultiAtoms AKTU B.Tech notes store. Features sub-millisecond responses, global search indexing, and automatic streaming PDF cache.</p>
+      <div class="stats-row">
+        <span class="stat-pill">Searchable Entities: <b id="statItems">3,615</b></span>
+        <span class="stat-pill">PYQ Question Papers: <b id="statPYQs">1,961</b></span>
+        <span class="stat-pill">Status: <b style="color:#00ffcc;">Online</b></span>
+      </div>
+    </div>
+
+    <h2 class="section-title"><i class="fa fa-plug"></i> Core Endpoints</h2>
+
+    <!-- Endpoint 1 -->
+    <div class="api-card">
+      <div class="endpoint-header">
+        <span class="method-get">GET</span>
+        <span class="endpoint-path">/api/health</span>
+      </div>
+      <p class="endpoint-desc">Returns service health status, server uptime, and entity count stats.</p>
+      <div class="code-block">
+        <code>curl http://localhost:3000/api/health</code>
+        <button class="btn-try" onclick="tryEndpoint('/api/health', 'resp-health')">Test Live</button>
+      </div>
+      <pre id="resp-health" class="response-preview"></pre>
+    </div>
+
+    <!-- Endpoint 2 -->
+    <div class="api-card">
+      <div class="endpoint-header">
+        <span class="method-get">GET</span>
+        <span class="endpoint-path">/api/search?q={query}&amp;category={cat}&amp;limit={n}</span>
+      </div>
+      <p class="endpoint-desc">Global fuzzy instant search across all 3,600+ subjects, units, notes, video lectures, and PYQ papers.</p>
+      <div class="code-block">
+        <code>curl "http://localhost:3000/api/search?q=machine+learning&limit=3"</code>
+        <button class="btn-try" onclick="tryEndpoint('/api/search?q=machine+learning&limit=3', 'resp-search')">Test Live</button>
+      </div>
+      <pre id="resp-search" class="response-preview"></pre>
+    </div>
+
+    <!-- Endpoint 3 -->
+    <div class="api-card">
+      <div class="endpoint-header">
+        <span class="method-get">GET</span>
+        <span class="endpoint-path">/api/notes/:category</span>
+      </div>
+      <p class="endpoint-desc">Fetch structured subjects, units, DPPs, and note links for any year. Valid categories: <code>1year</code>, <code>2ndyear</code>, <code>3year</code>, <code>4year</code>, <code>multiatom</code>, <code>3year-multiatom</code>, <code>4year-multiatom</code>.</p>
+      <div class="code-block">
+        <code>curl http://localhost:3000/api/notes/1year</code>
+        <button class="btn-try" onclick="tryEndpoint('/api/notes/1year', 'resp-notes')">Test Live</button>
+      </div>
+      <pre id="resp-notes" class="response-preview"></pre>
+    </div>
+
+    <!-- Endpoint 4 -->
+    <div class="api-card">
+      <div class="endpoint-header">
+        <span class="method-get">GET</span>
+        <span class="endpoint-path">/api/pyq?sem={sem}&amp;code={code}&amp;search={query}&amp;limit={n}</span>
+      </div>
+      <p class="endpoint-desc">Query and filter the entire database of 1,961+ official AKTU university previous year papers by semester (1 to 8), subject code, or keyword.</p>
+      <div class="code-block">
+        <code>curl "http://localhost:3000/api/pyq?sem=1&limit=2"</code>
+        <button class="btn-try" onclick="tryEndpoint('/api/pyq?sem=1&limit=2', 'resp-pyq')">Test Live</button>
+      </div>
+      <pre id="resp-pyq" class="response-preview"></pre>
+    </div>
+
+    <!-- Endpoint 5 -->
+    <div class="api-card">
+      <div class="endpoint-header">
+        <span class="method-get">GET</span>
+        <span class="endpoint-path">/pyq-download/:id/:nonce?code={code}&amp;title={title}&amp;dl=1</span>
+      </div>
+      <p class="endpoint-desc">Direct PDF streaming proxy with disk caching. Automatically downloads, caches in <code>server/cache/pdfs/</code>, and streams the official question paper PDF.</p>
+      <div class="code-block">
+        <code>http://localhost:3000/pyq-download/18692/fa1ad34acd?code=BAS101&title=Engineering_Physics</code>
+        <a class="btn-try" style="text-decoration:none;" href="/pyq-download/18692/fa1ad34acd?code=BAS101&title=Engineering_Physics" target="_blank">Open PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function tryEndpoint(url, elId) {
+      const el = document.getElementById(elId);
+      el.style.display = 'block';
+      el.textContent = 'Loading response...';
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        el.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        el.textContent = 'Error: ' + err.message;
+      }
+    }
+  </script>
+</body>
+</html>

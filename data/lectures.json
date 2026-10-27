@@ -1,0 +1,2064 @@
+{
+  "title": "AKTU B.Tech Video Lectures Hub — All 4 Years & 8 Semesters",
+  "channels": [
+    {
+      "id": "all",
+      "name": "All Channels",
+      "icon": "🎬"
+    },
+    {
+      "id": "ah-tutorials",
+      "name": "AH Tutorials",
+      "handle": "@AHTUTORIALS2024",
+      "url": "https://www.youtube.com/@AHTUTORIALS2024",
+      "icon": "🔥",
+      "badge": "AH Tutorials"
+    },
+    {
+      "id": "multiatoms",
+      "name": "MultiAtoms",
+      "handle": "@MultiAtoms",
+      "url": "https://www.youtube.com/@MultiAtoms",
+      "icon": "⚛️",
+      "badge": "MultiAtoms"
+    },
+    {
+      "id": "gateway-classes",
+      "name": "Gateway Classes",
+      "handle": "@GatewayClasses",
+      "url": "https://www.youtube.com/@GatewayClasses",
+      "icon": "🎓",
+      "badge": "Gateway Classes"
+    }
+  ],
+  "courses": [
+    {
+      "id": "sem1-bee",
+      "title": "Basic Electrical Engineering (BEE / FEE)",
+      "code": "BEE-101",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "⚡",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PLh11ucJN276LVQCgcc6ps_NtaaOMBbEIv",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: DC Circuits & Network Theorems One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LVQCgcc6ps_NtaaOMBbEIv"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: AC Circuits & Resonance One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LVQCgcc6ps_NtaaOMBbEIv"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Transformers & Magnetic Circuits One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LVQCgcc6ps_NtaaOMBbEIv"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Electrical Machines (DC & Induction) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LVQCgcc6ps_NtaaOMBbEIv"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Electrical Installations & Safety One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LVQCgcc6ps_NtaaOMBbEIv"
+        }
+      ]
+    },
+    {
+      "id": "sem1-chemistry",
+      "title": "Engineering Chemistry",
+      "code": "BAS-102",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "🧪",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Atomic and Molecular Structure One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Spectroscopic Techniques One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Electrochemistry & Corrosion One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Water Technology One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Polymers & Engineering Materials One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        }
+      ]
+    },
+    {
+      "id": "sem1-maths1",
+      "title": "Engineering Mathematics-I",
+      "code": "BAS-103",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "📐",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vXKy_Vz7YwXrBm7e2cIceO",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Matrices & Eigenvalues One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vXKy_Vz7YwXrBm7e2cIceO"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Differential Calculus I One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vXKy_Vz7YwXrBm7e2cIceO"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Differential Calculus II & Jacobians One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vXKy_Vz7YwXrBm7e2cIceO"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Multiple Integrals One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vXKy_Vz7YwXrBm7e2cIceO"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Vector Calculus One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vXKy_Vz7YwXrBm7e2cIceO"
+        }
+      ]
+    },
+    {
+      "id": "sem1-physics",
+      "title": "Engineering Physics",
+      "code": "BAS-101",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "⚛️",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PLh11ucJN276KQV0jrDM3883tvArRJwB7v",
+      "marathonUrl": "https://www.youtube.com/watch?v=2r7i1kzb2ch",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Relativistic Mechanics One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276KQV0jrDM3883tvArRJwB7v"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Electromagnetic Field Theory One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276KQV0jrDM3883tvArRJwB7v"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Quantum Mechanics One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276KQV0jrDM3883tvArRJwB7v"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Wave Optics & Interference One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276KQV0jrDM3883tvArRJwB7v"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Fiber Optics & Lasers One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276KQV0jrDM3883tvArRJwB7v"
+        }
+      ]
+    },
+    {
+      "id": "sem1-evs",
+      "title": "Environment & Ecology (EVS)",
+      "code": "BAS-104",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "🌱",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Ecosystem & Environment One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Natural Resources & Conservation One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Environmental Pollution & Control One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Environmental Protection Acts & Policies One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Human Population & Environment One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        }
+      ]
+    },
+    {
+      "id": "sem1-electronics",
+      "title": "Fundamentals of Electronics Engineering",
+      "code": "BEC-101",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "📡",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Semiconductor Diodes & Applications One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Bipolar Junction Transistors (BJT) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Field Effect Transistors (FET/MOSFET) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Operational Amplifiers (Op-Amps) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Digital Electronics & Electronic Instruments One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        }
+      ]
+    },
+    {
+      "id": "sem1-fme",
+      "title": "Fundamentals of Mechanical Engineering (FME)",
+      "code": "BME-101",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "⚙️",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Fundamentals+of+Mechanical+Engineering+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction to Thermodynamics & Systems One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=FME+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: IC Engines & Refrigeration Cycles One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=FME+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Fluid Mechanics & Hydraulic Turbines One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=FME+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Mechanical Power Transmission (Belts, Gears, Brakes) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=FME+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Engineering Materials & Industrial Robotics One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=FME+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem1-pps",
+      "title": "Programming for Problem Solving (PPS / C)",
+      "code": "BCS-101",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "💻",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8sCqx21iu0EnfFgQGL5U19l",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Intro to Computers & C Basics One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8sCqx21iu0EnfFgQGL5U19l"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Control Structures & Loops One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8sCqx21iu0EnfFgQGL5U19l"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Arrays & String Manipulation One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8sCqx21iu0EnfFgQGL5U19l"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Functions & Recursion in C One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8sCqx21iu0EnfFgQGL5U19l"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Pointers, Structures & File Handling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8sCqx21iu0EnfFgQGL5U19l"
+        }
+      ]
+    },
+    {
+      "id": "sem1-softskills",
+      "title": "Soft Skills",
+      "code": "BAS-105",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "🗣️",
+      "year": "1st Year",
+      "semester": 1,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Soft+Skills+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Basics of Technical Communication One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Soft+Skills+Unit+1+AKTU"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Phonetics, Accent & Vocabulary Building One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Soft+Skills+Unit+2+AKTU"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Reading Skills & Comprehension One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Soft+Skills+Unit+3+AKTU"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Professional Writing (Resumes, Emails, Letters) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Soft+Skills+Unit+4+AKTU"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Personality Development & Interview Skills One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Soft+Skills+Unit+5+AKTU"
+        }
+      ]
+    },
+    {
+      "id": "sem2-chem",
+      "title": "Engineering Chemistry (Group A)",
+      "code": "BAS-202",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "🧪",
+      "year": "1st Year",
+      "semester": 2,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG",
+      "marathonUrl": "https://www.youtube.com/watch?v=2r7i1kzb2ch",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Molecular Structure & Bonding One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Spectroscopic Techniques One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Electrochemistry & Battery Tech One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Water Analysis & Treatment One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Polymers, Organometallics & Nanomaterials One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+        }
+      ]
+    },
+    {
+      "id": "sem2-maths2",
+      "title": "Engineering Mathematics-II",
+      "code": "BAS-203",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "📐",
+      "year": "1st Year",
+      "semester": 2,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vzwDx1luAhJLUIWqzbVa-H",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Ordinary Differential Equations One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vzwDx1luAhJLUIWqzbVa-H"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Higher Order Linear ODEs One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vzwDx1luAhJLUIWqzbVa-H"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Sequence and Series One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vzwDx1luAhJLUIWqzbVa-H"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Complex Variable - Differentiation One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vzwDx1luAhJLUIWqzbVa-H"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Complex Variable - Integration One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vzwDx1luAhJLUIWqzbVa-H"
+        }
+      ]
+    },
+    {
+      "id": "sem2-evs",
+      "title": "Environment & Ecology (Group A)",
+      "code": "BAS-204",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "🌱",
+      "year": "1st Year",
+      "semester": 2,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Ecosystems & Biodiversity One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Natural Energy Resources One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Pollution Control & Solid Waste One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Environmental Protection Laws & EIA One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Climate Change & Sustainable Growth One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+        }
+      ]
+    },
+    {
+      "id": "sem2-electronics",
+      "title": "Fundamentals of Electronics (Group A)",
+      "code": "BEC-201",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "📡",
+      "year": "1st Year",
+      "semester": 2,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Semiconductor Diodes & Power Supplies One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Transistor Amplifiers (BJT) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Field Effect Transistors (JFET/MOSFET) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Operational Amplifiers (Op-Amps) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Digital Logic, Flip-Flops & Instruments One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+        }
+      ]
+    },
+    {
+      "id": "sem3-coa",
+      "title": "Computer Organization & Architecture (COA)",
+      "code": "BCS-302",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🖥️",
+      "year": "2nd Year",
+      "semester": 3,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=AKTU+COA+PYQ+Oneshot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Register Transfer & Microoperations One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=COA+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Basic Computer Organization & Design One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=COA+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Computer Arithmetic & ALU Design One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=COA+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Memory Hierarchy & Cache Mapping One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=COA+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Input-Output Organization & Pipelining One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=COA+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem3-dsa",
+      "title": "Data Structures & Algorithms (DSA)",
+      "code": "BCS-301",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🌳",
+      "year": "2nd Year",
+      "semester": 3,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSA+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Arrays, Stacks & Recursion One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSA+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Queues & Linked Lists One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSA+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Trees, Binary Trees & Traversals One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSA+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Graphs & Shortest Path Algorithms One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSA+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Searching, Sorting & Hashing One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSA+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem3-dstl",
+      "title": "Discrete Structures & Theory of Logic (DSTL)",
+      "code": "BCS-303",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🔢",
+      "year": "2nd Year",
+      "semester": 3,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSTL+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Sets, Relations & Propositional Logic One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSTL+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Algebraic Structures & Group Theory One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSTL+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Lattices & Boolean Algebra One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSTL+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Propositional & Predicate Logic One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSTL+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Trees & Graph Theory One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSTL+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem3-maths4",
+      "title": "Engineering Mathematics-IV (Maths 4)",
+      "code": "BAS-303",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "📈",
+      "year": "2nd Year",
+      "semester": 3,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Partial Differential Equations One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Applications of Partial Differential Equations One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Statistical Techniques I One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Statistical Techniques II & Hypothesis Testing One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Statistical Techniques III & ANOVA One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem3-python",
+      "title": "Python Programming",
+      "code": "BCC-302",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🐍",
+      "year": "2nd Year",
+      "semester": 3,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Python+Programming+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Python Basics, Data Types & Conditionals One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Python+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Functions, Loops & Modules One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Python+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Strings, Lists, Tuples & Dictionaries One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Python+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: File I/O & Exception Handling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Python+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: OOP in Python & Standard Libraries One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Python+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem3-tc",
+      "title": "Technical Communication (TC)",
+      "code": "BAS-301",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "📝",
+      "year": "2nd Year",
+      "semester": 3,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Technical+Communication+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Fundamentals of Technical Communication One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Technical+Communication+Unit+1"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Forms of Technical Communication One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Technical+Communication+Unit+2"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Technical Writing - Proposals & Reports One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Technical+Communication+Unit+3"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Technical Research Papers & Articles One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Technical+Communication+Unit+4"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Presentation Strategies & Nuances of Delivery One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Technical+Communication+Unit+5"
+        }
+      ]
+    },
+    {
+      "id": "sem3-uhv",
+      "title": "Universal Human Values (UHV)",
+      "code": "BVE-301",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "❤️",
+      "year": "2nd Year",
+      "semester": 3,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PLh11ucJN276LBBbvmFsopt4Lphrxwqlg1",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Course Intro - Need, Basic Guidelines One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LBBbvmFsopt4Lphrxwqlg1"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Understanding Harmony in the Human Being One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LBBbvmFsopt4Lphrxwqlg1"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Understanding Harmony in Family and Society One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LBBbvmFsopt4Lphrxwqlg1"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Understanding Harmony in Nature & Existence One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LBBbvmFsopt4Lphrxwqlg1"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Implications of Holistic Understanding One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LBBbvmFsopt4Lphrxwqlg1"
+        }
+      ]
+    },
+    {
+      "id": "sem4-cyber",
+      "title": "Cyber Security",
+      "code": "BCC-401",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🛡️",
+      "year": "2nd Year",
+      "semester": 4,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber+Security+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction to Cyber Security & Threats One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber+Security+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Cyber Offenses, Attacks & Social Engineering One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber+Security+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Cybercrime: Mobile & Wireless Devices One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber+Security+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Security Tools & Methods in Cyber Defense One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber+Security+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Cyber Laws & IT Act 2000 One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber+Security+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem4-maths4",
+      "title": "Engineering Mathematics IV (Complex & Stats)",
+      "code": "BAS-403",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "📐",
+      "year": "2nd Year",
+      "semester": 4,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Partial Differential Equations One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Applications of PDE & Wave Equation One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Statistical Techniques & Moments One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Probability & Sampling Distributions One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Hypothesis Testing & ANOVA One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem4-java",
+      "title": "Object Oriented Programming with Java",
+      "code": "BCS-403",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "☕",
+      "year": "2nd Year",
+      "semester": 4,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=OOP+with+Java+AKTU+One+Shot",
+      "marathonUrl": "https://www.youtube.com/watch?v=tcPbt94qy3g",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Core Java, OOP Principles & Syntax One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=tcPbt94qy3g"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Classes, Inheritance & Polymorphism One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=tcPbt94qy3g&t=1800s"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Packages & Exception Handling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=tcPbt94qy3g&t=3600s"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Multithreading & String Handling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=tcPbt94qy3g&t=5400s"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Applets, AWT & Event Handling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=tcPbt94qy3g&t=7200s"
+        }
+      ]
+    },
+    {
+      "id": "sem4-os",
+      "title": "Operating Systems (OS)",
+      "code": "BCS-401",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "💻",
+      "year": "2nd Year",
+      "semester": 4,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Operating+System+AKTU+One+Shot",
+      "marathonUrl": "https://www.youtube.com/watch?v=25sChVM6Dj4",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction to OS & System Calls One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=25sChVM6Dj4"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Process Management & CPU Scheduling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=25sChVM6Dj4&t=1800s"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Deadlocks & Concurrency Control One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=25sChVM6Dj4&t=3600s"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Memory Management & Virtual Memory One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=25sChVM6Dj4&t=5400s"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: File Systems & Disk Scheduling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=25sChVM6Dj4&t=7200s"
+        }
+      ]
+    },
+    {
+      "id": "sem4-tafl",
+      "title": "Theory of Automata & Formal Languages (TAFL)",
+      "code": "TCS-401",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "⚙️",
+      "year": "2nd Year",
+      "semester": 4,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=TAFL+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Finite Automata & Regular Expressions One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=TAFL+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Regular Languages & Pumping Lemma One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=TAFL+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Context Free Grammars & Normal Forms One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=TAFL+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Pushdown Automata (PDA) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=TAFL+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Turing Machines & Decidability One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=TAFL+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem5-coi",
+      "title": "Constitution of India (COI) / Law",
+      "code": "BNC-501",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "📜",
+      "year": "3rd Year",
+      "semester": 5,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Constitution+of+India+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Historical Background & Making of Constitution One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=COI+Unit+1+AKTU"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Fundamental Rights & Directive Principles One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=COI+Unit+2+AKTU"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Union Government & President Executive Powers One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=COI+Unit+3+AKTU"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: State Government & Judicial Framework One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=COI+Unit+4+AKTU"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Constitutional Amendments & Emergency Provisions One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=COI+Unit+5+AKTU"
+        }
+      ]
+    },
+    {
+      "id": "sem5-data-analytics",
+      "title": "Data Analytics",
+      "code": "BCS-052",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "📊",
+      "year": "3rd Year",
+      "semester": 5,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Data+Analytics+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction to Data Analytics & Descriptive Statistics One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Data+Analytics+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Inferential Statistics & Hypothesis Testing One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Data+Analytics+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Regression & Predictive Modeling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Data+Analytics+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Machine Learning for Analytics & Clustering One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Data+Analytics+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Big Data Analytics & Visualization One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Data+Analytics+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem5-dbms",
+      "title": "Database Management Systems (DBMS)",
+      "code": "BCS-501",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🗄️",
+      "year": "3rd Year",
+      "semester": 5,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DBMS+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Intro to DBMS, ER Diagrams & Relational Model One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DBMS+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Relational Algebra, Calculus & SQL One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DBMS+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Normalization & Functional Dependencies One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DBMS+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Transaction Processing & Concurrency Control One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DBMS+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Crash Recovery & Security One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DBMS+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem5-daa",
+      "title": "Design and Analysis of Algorithms (DAA)",
+      "code": "BCS-503",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "⚡",
+      "year": "3rd Year",
+      "semester": 5,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DAA+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Asymptotic Notations, Recurrences & Sorting One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=LcJSt92nx70"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Advanced Search Trees, B-Trees & Heaps One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=gfM3cvs_Rj0"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Dynamic Programming & Greedy Algorithms One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/watch?v=ii5UX1Pi2MU"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Graph Algorithms, MST & Shortest Paths One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DAA+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: String Matching & NP-Completeness One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DAA+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem5-wt",
+      "title": "Web Technology",
+      "code": "BCS-053",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "🌐",
+      "year": "3rd Year",
+      "semester": 5,
+      "playlistUrl": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8tzOlGXnZyxvtQLvYZ7Fykm",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: HTML5, CSS3 & Responsive Web Design One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8tzOlGXnZyxvtQLvYZ7Fykm"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: JavaScript, DOM & Events One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8tzOlGXnZyxvtQLvYZ7Fykm"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Server Side Programming with PHP / Node One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8tzOlGXnZyxvtQLvYZ7Fykm"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Database Integration & Sessions One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8tzOlGXnZyxvtQLvYZ7Fykm"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: XML, AJAX & Web Services One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8tzOlGXnZyxvtQLvYZ7Fykm"
+        }
+      ]
+    },
+    {
+      "id": "sem6-compiler",
+      "title": "Compiler Design",
+      "code": "BCS-601",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "⚙️",
+      "year": "3rd Year",
+      "semester": 6,
+      "playlistUrl": "https://youtube.com/playlist?list=PLh11ucJN276J4uv6uwawDr3mNHTdx9n43",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Lexical Analysis & Lex Tools One Shot",
+          "type": "oneshot",
+          "url": "https://youtube.com/playlist?list=PLh11ucJN276J4uv6uwawDr3mNHTdx9n43"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Syntax Analysis & Parsing (LL/LR) One Shot",
+          "type": "oneshot",
+          "url": "https://youtube.com/playlist?list=PLh11ucJN276J4uv6uwawDr3mNHTdx9n43"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Syntax Directed Translation (SDT) One Shot",
+          "type": "oneshot",
+          "url": "https://youtube.com/playlist?list=PLh11ucJN276J4uv6uwawDr3mNHTdx9n43"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Symbol Tables & Intermediate Code One Shot",
+          "type": "oneshot",
+          "url": "https://youtube.com/playlist?list=PLh11ucJN276J4uv6uwawDr3mNHTdx9n43"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Code Optimization & Generation One Shot",
+          "type": "oneshot",
+          "url": "https://youtube.com/playlist?list=PLh11ucJN276J4uv6uwawDr3mNHTdx9n43"
+        }
+      ]
+    },
+    {
+      "id": "sem6-cn",
+      "title": "Computer Networks (CN)",
+      "code": "BCS-602",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🌐",
+      "year": "3rd Year",
+      "semester": 6,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Computer+Networks+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction, OSI & TCP/IP Reference Models One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CN+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Physical & Data Link Layer Protocols One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CN+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Network Layer & Routing Algorithms (DVR, LSR) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CN+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Transport Layer Protocols (TCP/UDP, Flow Control) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CN+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Application Layer (DNS, HTTP, SMTP) & Security One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CN+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem6-ml",
+      "title": "Machine Learning (ML)",
+      "code": "BCS-063",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🤖",
+      "year": "3rd Year",
+      "semester": 6,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Intro to Machine Learning & Concept Learning One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Decision Trees & Artificial Neural Networks One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Bayesian Learning & Expectation Maximization One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Computational Learning Theory & Instance-Based One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Genetic Algorithms & Reinforcement Learning One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem6-se",
+      "title": "Software Engineering (SE)",
+      "code": "BCS-603",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "📐",
+      "year": "3rd Year",
+      "semester": 6,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Software+Engineering+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Software Development Life Cycle (SDLC) & Agile One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Software+Engineering+Unit+1"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Requirement Analysis, SRS & UML Modeling One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Software+Engineering+Unit+2"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Software Architectural Design & Modularization One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Software+Engineering+Unit+3"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Software Testing Strategies (White/Black Box) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Software+Engineering+Unit+4"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Software Maintenance, Cost Estimation & Quality One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Software+Engineering+Unit+5"
+        }
+      ]
+    },
+    {
+      "id": "sem7-ai",
+      "title": "Artificial Intelligence (AI)",
+      "code": "KCS-701",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🤖",
+      "year": "4th Year",
+      "semester": 7,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Artificial+Intelligence+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction to AI, Agents & State Space Search One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=AI+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Heuristic Search (A*, AO*) & Adversarial Game Search One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=AI+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Knowledge Representation & Predicate Logic One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=AI+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Probabilistic Reasoning & Bayesian Networks One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=AI+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Natural Language Processing (NLP) & Expert Systems One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=AI+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem7-blockchain",
+      "title": "Blockchain Architecture & Design",
+      "code": "KCS-072",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "⛓️",
+      "year": "4th Year",
+      "semester": 7,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Blockchain+Architecture+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Cryptographic Primitives & Distributed Systems One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Blockchain+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Bitcoin Architecture & Proof of Work (PoW) Consensus One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Blockchain+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Ethereum Virtual Machine (EVM) & Smart Contracts One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Blockchain+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Hyperledger Fabric & Enterprise Blockchains One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Blockchain+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Decentralized Finance (DeFi), NFTs & Blockchain Security One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Blockchain+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem7-cloud",
+      "title": "Cloud Computing",
+      "code": "KCS-071",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "☁️",
+      "year": "4th Year",
+      "semester": 7,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Cloud+Computing+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Cloud Computing Fundamentals & Service Models (IaaS, PaaS, SaaS) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cloud+Computing+Unit+1"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Virtualization Technologies & Hypervisors One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cloud+Computing+Unit+2"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Cloud Architecture, Storage & Resource Management One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cloud+Computing+Unit+3"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Cloud Security, Privacy & Disaster Recovery One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cloud+Computing+Unit+4"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Industry Platforms (AWS, Azure, GCP) & Future Trends One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cloud+Computing+Unit+5"
+        }
+      ]
+    },
+    {
+      "id": "sem7-cns",
+      "title": "Cryptography & Network Security (CNS)",
+      "code": "KCS-075",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🔐",
+      "year": "4th Year",
+      "semester": 7,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CNS+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Classical Encryption & Modern Symmetric Ciphers (DES/AES)",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CNS+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Public Key Cryptography & RSA Algorithm",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CNS+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Key Management, Diffie-Hellman & Elliptic Curves",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CNS+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Message Authentication, SHA & Digital Signatures",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CNS+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Network Security Protocols (IPSec, SSL/TLS, Firewalls)",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CNS+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem7-forensics",
+      "title": "Cyber Forensic Analytics",
+      "code": "KCS-073",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "🔍",
+      "year": "4th Year",
+      "semester": 7,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Cyber+Forensics+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Digital Forensics Principles & Chain of Custody One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cyber+Forensics+Unit+1"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Forensic Imaging & Evidence Seizure One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cyber+Forensics+Unit+2"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: File System Analysis & Steganography Detection One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cyber+Forensics+Unit+3"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Network & Live Memory Forensics One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cyber+Forensics+Unit+4"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Mobile Device Forensics & Cyber Legal Compliance One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Cyber+Forensics+Unit+5"
+        }
+      ]
+    },
+    {
+      "id": "sem7-iot",
+      "title": "Internet of Things (IoT)",
+      "code": "KCS-074",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "📱",
+      "year": "4th Year",
+      "semester": 7,
+      "playlistUrl": "https://www.youtube.com/@MultiAtoms/search?query=Internet+of+Things+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction to IoT & Physical Design One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=IoT+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: IoT Protocols (MQTT, CoAP, ZigBee, LoRa) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=IoT+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Microcontrollers: Arduino, ESP32 & Raspberry Pi One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=IoT+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: IoT Cloud Integration & Big Data in IoT One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=IoT+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Smart Cities, Industrial IoT (IIoT) & Security One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=IoT+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem8-deep-learning",
+      "title": "Deep Learning",
+      "code": "KCS-081",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🧠",
+      "year": "4th Year",
+      "semester": 8,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Deep+Learning+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction to Deep Learning, Perceptrons & Optimization One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Deep+Learning+Unit+1"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Convolutional Neural Networks (CNNs) & Image Classification One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Deep+Learning+Unit+2"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Recurrent Neural Networks (RNNs, LSTMs & GRUs) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Deep+Learning+Unit+3"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Autoencoders & Generative Adversarial Networks (GANs) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Deep+Learning+Unit+4"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Attention Mechanisms, Transformers & Pretrained LLMs One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Deep+Learning+Unit+5"
+        }
+      ]
+    },
+    {
+      "id": "sem8-dip",
+      "title": "Digital Image Processing",
+      "code": "KCS-801",
+      "channelId": "multiatoms",
+      "channelName": "MultiAtoms",
+      "channelBadge": "MultiAtoms",
+      "icon": "🖼️",
+      "year": "4th Year",
+      "semester": 8,
+      "playlistUrl": "https://www.youtube.com/@MultiAtoms/search?query=Digital+Image+Processing+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Digital Image Fundamentals & Sampling/Quantization One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=DIP+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Image Transforms (DFT, DCT, Wavelet) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=DIP+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Image Enhancement (Histogram, Spatial/Frequency Filters) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=DIP+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Image Restoration & Degradation Models One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=DIP+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Edge Detection, Segmentation & Morphological Processing One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@MultiAtoms/search?query=DIP+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem8-distributed",
+      "title": "Distributed Systems",
+      "code": "KCS-082",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🌐",
+      "year": "4th Year",
+      "semester": 8,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Distributed+Systems+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Distributed Models & IPC One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Distributed+Systems+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Logical Clocks & Synchronization One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Distributed+Systems+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Distributed Mutual Exclusion & Election One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Distributed+Systems+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Fault Tolerance & Consensus Protocols One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Distributed+Systems+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Distributed File Systems (NFS/HDFS) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Distributed+Systems+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem8-entrepreneurship",
+      "title": "Entrepreneurship Development",
+      "code": "KOE-082",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "💼",
+      "year": "4th Year",
+      "semester": 8,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Entrepreneurship+Development+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Concept & Definition of Entrepreneurship One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Entrepreneurship+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Business Opportunities & Project Selection One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Entrepreneurship+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Project Appraisal & Financing Methods One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Entrepreneurship+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: MSME Regulations & Enterprise Management One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Entrepreneurship+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Industrial Support Institutions & Policies One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=Entrepreneurship+Unit+5+One+Shot"
+        }
+      ]
+    },
+    {
+      "id": "sem8-ml",
+      "title": "Machine Learning (ML)",
+      "code": "KCS-082",
+      "channelId": "ah-tutorials",
+      "channelName": "AH Tutorials",
+      "channelBadge": "AH Tutorials",
+      "icon": "🤖",
+      "year": "4th Year",
+      "semester": 8,
+      "playlistUrl": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Introduction, Linear Regression & Logistic Regression One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+1"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Decision Trees, Random Forests & Ensemble Learning One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+2"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Support Vector Machines (SVM) & Kernel Tricks One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+3"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Clustering (K-Means, Hierarchical) & PCA One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+4"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Reinforcement Learning & Model Evaluation Metrics One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+5"
+        }
+      ]
+    },
+    {
+      "id": "sem8-rer",
+      "title": "Renewable Energy Resources (RER)",
+      "code": "KOE-081",
+      "channelId": "gateway-classes",
+      "channelName": "Gateway Classes",
+      "channelBadge": "Gateway Classes",
+      "icon": "☀️",
+      "year": "4th Year",
+      "semester": 8,
+      "playlistUrl": "https://www.youtube.com/@GatewayClasses/search?query=Renewable+Energy+Resources+AKTU+One+Shot",
+      "units": [
+        {
+          "unit": "Unit 1",
+          "title": "Unit 1: Solar Radiation, Collectors & Thermal Conversion One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=RER+Unit+1+One+Shot"
+        },
+        {
+          "unit": "Unit 2",
+          "title": "Unit 2: Solar Photovoltaics (PV) & Maximum Power Tracking One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=RER+Unit+2+One+Shot"
+        },
+        {
+          "unit": "Unit 3",
+          "title": "Unit 3: Wind Energy Conversion Systems & Aerodynamics One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=RER+Unit+3+One+Shot"
+        },
+        {
+          "unit": "Unit 4",
+          "title": "Unit 4: Geothermal, Ocean Energy (OTEC, Wave, Tidal) One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=RER+Unit+4+One+Shot"
+        },
+        {
+          "unit": "Unit 5",
+          "title": "Unit 5: Biomass Gasification, Fuel Cells & Hydrogen Economy One Shot",
+          "type": "oneshot",
+          "url": "https://www.youtube.com/@GatewayClasses/search?query=RER+Unit+5+One+Shot"
+        }
+      ]
+    }
+  ]
+}

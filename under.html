@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="referrer" content="no-referrer" />
   <meta name="google-site-verification" content="mb-uJhZNqGXFDOYFW_OKNjW0oha4dg6y3RZKfoRtJro" />
   <meta name="985200b6866c8b25f8ada227851a86a0c014120f" content="985200b6866c8b25f8ada227851a86a0c014120f" />
 
@@ -1657,10 +1657,16 @@
         } catch (_) {}
       }
 
+      // Fallback: If local proxy and serverless are offline, open instant verified educational repository search
+      const searchUrl = 'https://www.google.com/search?q=AKTU+' + encodeURIComponent((code || '') + ' ' + (title || 'paper') + ' question paper pdf download');
+      window.open(searchUrl, '_blank', 'noopener');
       if (btn) {
-        btn.innerHTML = '❌ Retry';
+        btn.innerHTML = '🔍 Search Opened';
         btn.style.pointerEvents = 'auto';
-        setTimeout(() => { btn.innerHTML = originalText; }, 2500);
+        setTimeout(() => { btn.innerHTML = originalText; }, 3000);
+      }
+      if (typeof window.showToast === 'function') {
+        window.showToast('Direct server busy. Opened Google/AKTU repository search for ' + code, true);
       }
     }
 
