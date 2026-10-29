@@ -3,12 +3,11 @@
 <head>
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="referrer" content="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0", viewport-fit=cover, viewport-fit=cover />
+<meta name="referrer" content="no-referrer">
 
 <title>Multi Atoms BTech 2nd Year Notes AKTU - MultiAtoms Quantum & Notes PDF</title>
   <link rel="stylesheet" href="gwc-ui.css">
-  <link rel="stylesheet" href="css/student-tracker.css">
  <link rel="icon" href="https://i.ibb.co/qYC69dyG/Chat-GPT-Image-Aug-6-2026-10-25-09-PM.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -20,7 +19,7 @@
 <meta name="keywords" content="multi atoms notes, multiatoms notes, multi atom 2nd year notes, multiatoms 2nd year notes aktu, aktu multiatom quantum, dsa multiatoms, coa multiatoms">
 <meta name="author" content="Shivansh (@ShivanshSWE-cmd)">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="theme-color" content="#0a0e1a">
+<meta name="theme-color" content="#070b14">
 <link rel="canonical" href="https://getwayclassesnotes.netlify.app/multiatom.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gateway Classes">
@@ -164,10 +163,533 @@
 
 
 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
+  :root {
+    --bg-primary: #070b14;
+    --bg-secondary: #0a0f29;
+    --bg-card: rgba(14, 22, 53, 0.72);
+    --bg-card-hover: rgba(22, 33, 76, 0.85);
+    --accent-cyan: #f59e0b;
+    --accent-blue: #2563eb;
+    --accent-purple: #9333ea;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-card: rgba(245, 158, 11, 0.16);
+    --border-hover: rgba(245, 158, 11, 0.45);
+    --card-glow: 0 8px 32px rgba(245, 158, 11, 0.08);
+  }
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html, body {
+    background: var(--bg-primary);
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.18) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(147, 51, 234, 0.18) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(245, 158, 11, 0.06) 0px, transparent 60%);
+    background-attachment: fixed;
+    color: var(--text-main);
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  #gwcHomeBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 99999;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 14px;
+    border-radius: 10px;
+    background: rgba(5, 8, 22, 0.72);
+    color: #f59e0b;
+    border: 1px solid #f59e0b;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.45);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: 0.25s;
+  }
+
+  #gwcHomeBtn:hover {
+    background: #f59e0b;
+    color: #070b14;
+    box-shadow: 0 0 18px rgba(245, 158, 11, 0.8);
+  }
+
+  .hub-header {
+    text-align: center;
+    padding: 48px 16px 12px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .badge-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 30px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    color: var(--accent-cyan);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff 20%, #bafcff 60%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    text-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+  }
+
+  .hub-subtitle {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .portal-banner {
+    max-width: 960px;
+    margin: 0 auto 10px;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .portal-switch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 12px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #f59e0b;
+    font-weight: 600;
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: 0.25s;
+  }
+
+  .portal-switch-btn:hover {
+    background: rgba(245, 158, 11, 0.18);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .main-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4px 14px 25px;
+  }
+
+  .search-filter-section {
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    background: rgba(5, 8, 22, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(245, 158, 11, 0.18);
+    border-radius: 18px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  .search-box-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 16px;
+    color: var(--accent-cyan);
+    pointer-events: none;
+  }
+
+  #noteSearch {
+    width: 100%;
+    padding: 12px 42px 12px 42px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    transition: 0.25s ease;
+  }
+
+  #noteSearch:focus {
+    border-color: var(--accent-cyan);
+    background: rgba(245, 158, 11, 0.05);
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
+  }
+
+  .clear-btn {
+    position: absolute;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.2s;
+  }
+
+  .clear-btn:hover {
+    background: rgba(239, 68, 68, 0.7);
+  }
+
+  .chips-container {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 12px 2px 4px;
+    margin-top: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(245, 158, 11, 0.3) transparent;
+  }
+
+  .chips-container::-webkit-scrollbar {
+    height: 4px;
+  }
+  .chips-container::-webkit-scrollbar-thumb {
+    background: rgba(245, 158, 11, 0.3);
+    border-radius: 4px;
+  }
+
+  .subject-chip {
+    flex-shrink: 0;
+    padding: 7px 14px;
+    border-radius: 10px;
+    font-size: 12.5px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+  }
+
+  .subject-chip:hover {
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.4);
+    color: var(--accent-cyan);
+  }
+
+  .subject-chip.active {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(37, 99, 235, 0.3));
+    color: #fff;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 14px rgba(245, 158, 11, 0.3);
+  }
+
+  .results-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding: 0 4px;
+  }
+
+  .subjects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .subject-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: var(--card-glow);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .subject-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 12px 36px rgba(245, 158, 11, 0.15);
+  }
+
+  .subject-card-header {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+  }
+
+  .subject-card-header:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  .subject-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .subject-title-area {
+    min-width: 0;
+  }
+
+  .subject-title-area h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .subject-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .badge-count {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .chevron-icon {
+    font-size: 13px;
+    color: var(--accent-cyan);
+    transition: transform 0.3s ease;
+  }
+
+  .subject-card.open .chevron-icon {
+    transform: rotate(180deg);
+  }
+
+  .subject-content {
+    display: none;
+    padding: 0 18px 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    animation: fadeIn 0.25s ease;
+  }
+
+  .subject-card.open .subject-content {
+    display: block;
+  }
+
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 10px;
+    padding-top: 14px;
+  }
+
+  .note-card-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s ease;
+  }
+
+  .note-card-link:hover {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.15);
+  }
+
+  .note-card-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .note-type-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .note-text-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .note-name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #f1f5f9;
+    line-height: 1.35;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .note-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .note-open-badge {
+    flex-shrink: 0;
+    padding: 4px 9px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    letter-spacing: 0.3px;
+    transition: 0.2s;
+    white-space: nowrap;
+  }
+
+  .note-card-link:hover .note-open-badge {
+    background: var(--accent-cyan);
+    color: #070b14;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    color: var(--text-muted);
+  }
+
+  .no-results span {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* === Responsive high-earning ad slots === */
+
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  .support {
+    text-align: center;
+    margin: 16px 0 12px;
+    font-size: 13.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    flex-wrap: wrap;
+  }
+
+  .support img {
+    width: 18px;
+    height: 18px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.35rem; }
+    .main-wrap { padding: 6px 10px 22px; }
+    .hub-header { padding-top: 55px; }
+    #gwcHomeBtn { top: 10px; left: 10px; padding: 6px 10px; font-size: 11.5px; }
+    .notes-grid { grid-template-columns: 1fr; }
+    .subject-card-header { padding: 12px 12px; gap: 8px; }
+    .subject-content { padding: 0 10px 12px; }
+    .header-left { gap: 10px; }
+    .subject-icon-box { width: 36px; height: 36px; font-size: 17px; }
+    .subject-title-area h2 { font-size: 0.95rem; }
+    .badge-count { font-size: 10px; padding: 3px 7px; }
+    .note-card-link { padding: 9px 10px; }
+    .note-name { font-size: 12.5px; }
+  }
+
+  @media (min-width: 601px) and (max-width: 900px) {
+    h1 { font-size: 1.75rem; }
+    .notes-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+
+<link rel="stylesheet" href="gwc-premium.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  </head>
+  <link rel="stylesheet" href="css/student-tracker.css">
+</head>
 <body>
 <a aria-label='Back to Home' href='index.html' id='gwcHomeBtn' title='Back to Home'>🏠 Home</a>
 
@@ -187,7 +709,7 @@
 
 
 <div class="portal-banner">
-  <a class='portal-switch-btn' href='/2ndyear'>📝 Switch to Gateway Classes 2nd Year Notes Hub ➔</a>
+  <a class='portal-switch-btn' href='2ndyear.html'>📝 Switch to Gateway Classes 2nd Year Notes Hub ➔</a>
 </div>
 
 <div class="main-wrap">
@@ -200,7 +722,7 @@
     <div class="chips-container" id="subjectChips"></div>
     <div class="results-count" id="resultsCount">
       <span id="resultsText">Showing all subjects</span>
-      <button id="toggleAllBtn">Expand All</button>
+      <button id="toggleAllBtn" style="background:none;border:none;color:#f59e0b;cursor:pointer;font-size:12px;text-decoration:underline;">Expand All</button>
     </div>
   </div>
 
@@ -219,14 +741,10 @@
 </div>
 <!-- ===== /AD SLOT ===== -->
 
-  <div class="support">
-    <span>Created with ❤️ by <b>Shivansh</b></span>
-    <a href="https://github.com/ShivanshSWE-cmd" target="_blank" rel="noopener">
-      <i class="fab fa-github"></i> GitHub: @ShivanshSWE-cmd
-    </a>
-    <a href="https://instagram.com/Shiva._SWE" target="_blank" rel="noopener">
-      <i class="fab fa-instagram"></i> Instagram: @Shiva._SWE
-    </a>
+<div class="support">
+    <span>Created with ❤️ by <b>Shivansh</b></span> &bull;
+    <a href="https://github.com/ShivanshSWE-cmd" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub: @ShivanshSWE-cmd</a> &bull;
+    <a href="https://instagram.com/Shiva._SWE" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram: @Shiva._SWE</a>
   </div>
 
 
@@ -410,12 +928,8 @@
   });
 
   toggleAllBtn.addEventListener('click', () => {
-    const cards = document.querySelectorAll('.subject-card');
-    /* Decide by REAL state, not a flag � cards can be auto-opened by
-       subject filter or search, which never touches allExpanded. */
-    const anyOpen = Array.prototype.some.call(cards, c => c.classList.contains('open'));
-    allExpanded = !anyOpen;
-    cards.forEach(c => {
+    allExpanded = !allExpanded;
+    document.querySelectorAll('.subject-card').forEach(c => {
       if (allExpanded) c.classList.add('open');
       else c.classList.remove('open');
     });
@@ -426,7 +940,7 @@
 </script>
 <script>
     
-/* contextmenu enabled */
+document.addEventListener('contextmenu', event => event.preventDefault());
 </script>
 
 <!-- Ad slot housekeeping handled by site-ads.js (watchSlots) -->

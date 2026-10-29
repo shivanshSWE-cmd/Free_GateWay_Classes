@@ -1,0 +1,474 @@
+/*
+ * Gateway Classes — PREMIUM DESIGN LAYER v1.0
+ * ====================================================================
+ * "Aurora Glass" — loaded LAST on every page (after gwc-ui.css /
+ * year4-hub.css and that page's inline <style>), so these values win
+ * the cascade everywhere without touching a single existing file's
+ * layout rules.
+ *
+ *   • deep-space aurora gradient ambience
+ *   • layered glass cards with top-edge highlights + violet/cyan depth
+ *   • gradient headings & accent stripes (cyan → violet)
+ *   • gradient-filled chips, badges and buttons with soft glows
+ *   • premium easing curve, staggered card entrances, focus rings
+ *   • custom aurora scrollbar, dark color-scheme, reduced-motion safe
+ *
+ * SAFETY CONTRACT — restyling only. The ad engine's functional
+ * selectors are deliberately NOT declared here:
+ *   .ad-slot, .ad-slot:empty, #gwc-anchor, .ad-mid, iframe
+ * Layout grids, spacing contracts and JS-bound IDs/classes keep their
+ * existing declarations untouched.
+ * ====================================================================
+ */
+
+:root {
+  color-scheme: dark;
+  --pre-ease:    cubic-bezier(.22, 1, .36, 1);
+  --pre-cyan:    #00eaff;
+  --pre-violet:  #7c5cff;
+  --pre-mint:    #00ffcc;
+  --pre-card:    linear-gradient(165deg, rgba(255,255,255,.055) 0%, rgba(9,16,32,.90) 45%, rgba(9,16,32,.94) 100%);
+  --pre-ring:    inset 0 1px 0 rgba(255,255,255,.07);
+  --pre-shadow:  0 18px 44px -18px rgba(0,0,0,.85);
+  --pre-glow:    0 0 26px -6px rgba(0,234,255,.35);
+}
+
+/* ── Ambient aurora background (painted on <body>, behind everything) ─ */
+body {
+  background:
+    radial-gradient(900px 540px at 12% -10%, rgba(0,234,255,.10), transparent 62%),
+    radial-gradient(820px 560px at 94% 110%, rgba(124,92,255,.13), transparent 60%),
+    radial-gradient(560px 420px at 82% -8%,  rgba(0,255,204,.05), transparent 60%),
+    var(--bg, #050816);
+  line-height: 1.6;
+}
+
+/* ── Gradient headings ───────────────────────────────────────────── */
+h1 {
+  background: linear-gradient(115deg, #ffffff 0%, #d6fcff 34%, #58e7ff 68%, #8b7dff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 4px 20px rgba(0,234,255,.32));
+}
+
+.hub-header h1 { filter: drop-shadow(0 5px 22px rgba(0,234,255,.35)); }
+
+.hub-subtitle,
+.hero-sub { color: #a7b6cb; }
+
+.hub-subtitle b { color: #5ceaff; }
+
+/* Homepage hero — slow aurora drift across the gradient */
+.hero h1 {
+  background: linear-gradient(115deg, #ffffff 0%, #c8fbff 26%, #00eaff 50%, #7c5cff 82%, #ffffff 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 8px 26px rgba(0,234,255,.30));
+  animation: preHue 9s ease-in-out infinite alternate;
+}
+
+/* ── Body copy polish ────────────────────────────────────────────── */
+body { color: #e8f3fb; }
+
+::selection { background: rgba(0,234,255,.85); color: #041018; }
+
+input::placeholder { color: #5b6b83; }
+
+input[type="text"], #noteSearch, #subjectSearch, #search { caret-color: var(--pre-cyan); }
+
+/* ── Glass treatment — shared card family ────────────────────────── */
+.portal-card,
+.note-card-link,
+.subject-card,
+.paper-card {
+  background: var(--pre-card);
+  border-color: rgba(255,255,255,.09);
+  box-shadow: var(--pre-ring), var(--pre-shadow);
+  transition: transform .35s var(--pre-ease),
+              border-color .35s var(--pre-ease),
+              box-shadow .35s var(--pre-ease);
+}
+
+.portal-card:hover,
+.note-card-link:hover,
+.subject-card:hover,
+.paper-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0,234,255,.55);
+  box-shadow: var(--pre-ring),
+              0 26px 52px -18px rgba(0,0,0,.9),
+              0 0 30px -6px rgba(0,234,255,.38);
+}
+
+/* Violet-cyan accent stripe on card left edge */
+.note-card-link::before,
+.subject-card::before {
+  width: 3px;
+  background: linear-gradient(to bottom, var(--pre-cyan), var(--pre-violet));
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.note-card-link:hover::before,
+.subject-card:hover::before { opacity: 1; }
+
+/* Card hover sheen — richer cyan→violet sweep */
+.portal-card::after {
+  background: linear-gradient(135deg, rgba(0,234,255,.10) 0%, rgba(124,92,255,.08) 48%, transparent 72%);
+}
+
+/* Gradient hairline above card footers */
+.card-footer {
+  border-top-color: transparent;
+  background-image: linear-gradient(90deg, rgba(0,234,255,.30), rgba(124,92,255,.20), transparent 82%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+/* ── Year-card icon chips — glass depth over per-card hues ───────── */
+.card-icon {
+  background-image: linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,0));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 8px 20px -10px rgba(0,0,0,.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ── Badges, pills & chips — aurora fills ────────────────────────── */
+.badge-pill,
+.nav-badge,
+.eyebrow,
+.stat-chip,
+.subject-chip,
+.sem-tab-btn,
+.session-chip,
+.unit-tab,
+.card-badge,
+.results-count span {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+.badge-pill,
+.nav-badge,
+.eyebrow {
+  background-image: linear-gradient(135deg, rgba(0,234,255,.14), rgba(124,92,255,.13));
+  border-color: rgba(255,255,255,.16);
+}
+
+.stat-chip {
+  background: linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.03));
+  border-color: rgba(255,255,255,.14);
+}
+
+.subject-chip,
+.sem-tab-btn,
+.session-chip,
+.unit-tab {
+  background-image: linear-gradient(135deg, rgba(0,234,255,.10), rgba(124,92,255,.09));
+  border-color: rgba(255,255,255,.14);
+}
+
+.subject-chip.active,
+.sem-tab-btn.active,
+.session-chip.active,
+.unit-tab.active {
+  background-image: linear-gradient(135deg, rgba(0,234,255,.30), rgba(124,92,255,.22));
+  border-color: rgba(0,234,255,.75);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 0 18px rgba(0,234,255,.30);
+}
+
+/* ── Section labels — gradient text + full-width hairline ────────── */
+.section-label {
+  background: linear-gradient(90deg, #8df7ff, #00eaff 45%, #8b7dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(0,234,255,.30));
+}
+.section-label::after {
+  max-width: none;
+  background: linear-gradient(90deg, rgba(0,234,255,.45), rgba(124,92,255,.28), transparent);
+}
+
+/* ── Search bar — layered glass ──────────────────────────────────── */
+.search-box-wrapper {
+  background: linear-gradient(160deg, rgba(255,255,255,.065), rgba(9,16,32,.93));
+  border-color: rgba(255,255,255,.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 12px 32px -16px rgba(0,0,0,.85);
+}
+.search-box-wrapper:focus-within {
+  border-color: rgba(0,234,255,.75);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10),
+              0 0 0 3px rgba(0,234,255,.14),
+              0 16px 36px -16px rgba(0,0,0,.9);
+}
+
+/* ── Buttons — gradient primaries ────────────────────────────────── */
+.note-download-btn,
+.subject-link-btn,
+.load-more-btn {
+  background-image: linear-gradient(135deg, rgba(0,234,255,.18), rgba(124,92,255,.16));
+  border-color: rgba(255,255,255,.16);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 8px 22px -12px rgba(0,234,255,.5);
+}
+.note-download-btn:hover,
+.subject-link-btn:hover,
+.load-more-btn:hover {
+  background-image: linear-gradient(135deg, #00eaff, #6ea8ff);
+  background-color: transparent;
+  color: #041018;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -10px rgba(0,234,255,.55);
+}
+
+.card-btn {
+  background-image: linear-gradient(135deg, rgba(0,234,255,.16), rgba(124,92,255,.14));
+  border-color: rgba(255,255,255,.16);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10);
+}
+.portal-card:hover .card-btn {
+  background-image: linear-gradient(135deg, #00eaff, #6ea8ff);
+  background-color: transparent;
+  border-color: transparent;
+  color: #041018;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px -8px rgba(0,234,255,.6);
+}
+
+.paper-download-btn {
+  box-shadow: 0 10px 26px -12px rgba(245,158,11,.55);
+  border-radius: 10px;
+}
+.paper-download-btn:hover {
+  box-shadow: 0 0 24px rgba(245,158,11,.6);
+  transform: translateY(-2px);
+}
+
+.paper-tag {
+  background-image: linear-gradient(135deg, rgba(0,234,255,.12), rgba(124,92,255,.10));
+  border-color: rgba(255,255,255,.14);
+}
+
+/* ── PYQ featured card — keep the gold identity, add depth ───────── */
+.portal-grid .c-pyq {
+  background: linear-gradient(135deg, rgba(245,158,11,.10) 0%, rgba(10,18,35,.95) 55%);
+  border-color: rgba(245,158,11,.40);
+}
+.portal-grid .c-pyq:hover {
+  border-color: rgba(251,191,36,.75);
+  box-shadow: var(--pre-ring),
+              0 26px 52px -18px rgba(0,0,0,.9),
+              0 0 32px -6px rgba(245,158,11,.40);
+}
+.portal-grid .c-pyq .card-btn {
+  background-image: linear-gradient(135deg, rgba(245,158,11,.22), rgba(217,119,6,.16));
+  border-color: rgba(245,158,11,.45);
+  color: #fbbf24;
+}
+.portal-grid .c-pyq:hover .card-btn {
+  background-image: linear-gradient(135deg, #f59e0b, #fbbf24);
+  background-color: transparent;
+  border-color: transparent;
+  color: #1a1004;
+}
+
+/* ── Back / home buttons — floating glass ────────────────────────── */
+#gwcHomeBtn,
+.home {
+  background: linear-gradient(160deg, rgba(9,16,32,.95), rgba(9,16,32,.88));
+  border-color: rgba(0,234,255,.45);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 10px 26px -12px rgba(0,0,0,.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+#gwcHomeBtn:hover,
+.home:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 0 24px rgba(0,234,255,.40);
+}
+
+/* ── Sticky panels & empty states ────────────────────────────────── */
+.controls-panel {
+  background: linear-gradient(rgba(5,8,22,.97), rgba(5,8,22,.93));
+  border-bottom-color: rgba(255,255,255,.08);
+  box-shadow: 0 14px 32px -20px rgba(0,0,0,.95);
+}
+
+.no-results {
+  background: linear-gradient(160deg, rgba(255,255,255,.04), rgba(9,16,32,.72));
+  border-color: rgba(255,255,255,.10);
+}
+
+/* ── Homepage brand & nav ────────────────────────────────────────── */
+.brand-icon {
+  background: linear-gradient(135deg, rgba(0,234,255,.35), rgba(124,92,255,.30));
+  border-color: rgba(255,255,255,.25);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.28), 0 10px 24px -10px rgba(0,234,255,.55);
+}
+.brand-text {
+  background: linear-gradient(120deg, #ffffff, #8ef4ff 55%, #00eaff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.nav-badge {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 0 16px rgba(0,234,255,.22);
+}
+
+/* Calmer matrix — let the content breathe */
+#matrixCanvas { opacity: .12; }
+
+/* ── Footer — classy glow instead of raw neon ────────────────────── */
+.credit-pill {
+  background: linear-gradient(140deg, rgba(0,255,204,.09), rgba(0,234,255,.06));
+  border-color: rgba(0,255,204,.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 12px 32px -16px rgba(0,0,0,.85);
+  animation: preGlow 3.2s ease-in-out infinite alternate;
+}
+.credit-pill:hover {
+  background: linear-gradient(140deg, rgba(0,255,204,.15), rgba(0,234,255,.10));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 0 30px rgba(0,255,204,.35);
+}
+
+.soc-btn {
+  background-image: linear-gradient(135deg, rgba(0,255,204,.10), rgba(0,234,255,.06));
+  border-color: rgba(255,255,255,.14);
+}
+.soc-btn:hover {
+  box-shadow: 0 14px 30px -12px rgba(0,255,204,.5);
+  transform: translateY(-4px);
+}
+
+.hit-counter { opacity: .8; }
+
+/* ── Year-4 hub panels (4year / 4year-multiatom) ─────────────────── */
+.tools {
+  background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(5,8,22,.95));
+  border-color: rgba(255,255,255,.10);
+  box-shadow: var(--pre-ring), 0 16px 36px -20px rgba(0,0,0,.95);
+}
+.subject {
+  background: linear-gradient(160deg, rgba(255,255,255,.045), rgba(14,22,53,.90));
+  border-color: rgba(255,255,255,.10);
+  box-shadow: var(--pre-ring);
+}
+.subject summary:hover {
+  background: linear-gradient(120deg, rgba(0,234,255,.07), rgba(124,92,255,.05));
+}
+.note {
+  background: linear-gradient(140deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border-color: rgba(255,255,255,.10);
+}
+.note:hover {
+  border-color: rgba(0,234,255,.6);
+  background: linear-gradient(140deg, rgba(0,234,255,.10), rgba(124,92,255,.07));
+  box-shadow: 0 10px 24px -14px rgba(0,234,255,.45);
+}
+#search {
+  background: rgba(255,255,255,.055);
+  border-radius: 12px;
+}
+#search:focus {
+  border-color: rgba(0,234,255,.75);
+  box-shadow: 0 0 0 3px rgba(0,234,255,.14);
+}
+#expandAll,
+.switcher {
+  background-image: linear-gradient(135deg, rgba(0,234,255,.12), rgba(124,92,255,.10));
+  border-color: rgba(255,255,255,.15);
+}
+#expandAll:hover,
+.switcher:hover {
+  border-color: rgba(0,234,255,.65);
+  box-shadow: 0 0 16px rgba(0,234,255,.28);
+}
+
+/* ── Entrance choreography (paint-only; fill:backwards keeps hover
+      transforms free after the animation completes) ────────────────── */
+@keyframes preRise {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes preFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes preHue {
+  from { background-position: 0% 50%; }
+  to   { background-position: 200% 50%; }
+}
+@keyframes preGlow {
+  from { box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 12px 32px -16px rgba(0,0,0,.85), 0 0 16px -8px rgba(0,255,204,.35); }
+  to   { box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 12px 32px -16px rgba(0,0,0,.85), 0 0 30px -6px rgba(0,234,255,.50); }
+}
+
+.portal-grid > .portal-card {
+  animation: preRise .65s var(--pre-ease) backwards;
+}
+.portal-grid > .portal-card:nth-child(1) { animation-delay: .05s; }
+.portal-grid > .portal-card:nth-child(2) { animation-delay: .11s; }
+.portal-grid > .portal-card:nth-child(3) { animation-delay: .17s; }
+.portal-grid > .portal-card:nth-child(4) { animation-delay: .23s; }
+.portal-grid > .portal-card:nth-child(5) { animation-delay: .29s; }
+.portal-grid > .portal-card:nth-child(6) { animation-delay: .35s; }
+.portal-grid > .portal-card:nth-child(7) { animation-delay: .41s; }
+.portal-grid > .portal-card:nth-child(8) { animation-delay: .47s; }
+.portal-grid > .portal-card:nth-child(9) { animation-delay: .53s; }
+
+/* JS-rendered list cards: opacity only — rects/geometry untouched */
+.note-card-link,
+.subject-card,
+.papers-grid > * {
+  animation: preFade .45s ease backwards;
+}
+
+/* ── Accessibility ───────────────────────────────────────────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid rgba(0,234,255,.85);
+  outline-offset: 2px;
+}
+
+/* ── Aurora scrollbar ────────────────────────────────────────────── */
+html {
+  scrollbar-color: #00eaff #070b16;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #070b16; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00eaff, #7c5cff);
+  border-radius: 99px;
+  border: 2px solid #070b16;
+}
+::-webkit-scrollbar-thumb:hover { filter: brightness(1.15); }
+
+/* ── Print — white paper, black ink ──────────────────────────────── */
+@media print {
+  body { background: #fff !important; background-image: none !important; }
+  h1 {
+    filter: none !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
