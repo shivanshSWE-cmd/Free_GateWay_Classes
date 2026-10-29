@@ -1,930 +1,260 @@
-/* ============================================================
-   GATEWAY CLASSES — STUDENT UNIT COMPLETION TRACKER
-   User-friendly progress tracking, checkboxes, and modal dashboard
-   Official Gateway Classes Obsidian Navy & Gold Theme
-   ============================================================ */
+/* ── Gateway Classes Student Tracker & App Modal Styles ── */
 
-/* ── Top Bar Tracker Nav Pill & Button ──────────────────────── */
-.nav-tracker-btn,
-.tracker-nav-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(251, 191, 36, 0.08));
-  border: 1px solid rgba(245, 158, 11, 0.38);
-  color: #fbbf24;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.22s ease;
-  white-space: nowrap;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.nav-tracker-btn:hover,
-.tracker-nav-pill:hover {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-  color: #070d18;
-  border-color: #f59e0b;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
-}
-
-.nav-tracker-btn i,
-.tracker-nav-pill i {
-  font-size: 13px;
-  color: inherit;
-}
-
-/* ── Home Page Tracker Banner Hero Widget ───────────────────── */
-.home-tracker-banner {
-  margin: 18px auto 0;
-  max-width: 680px;
-  width: 100%;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(19, 31, 55, 0.92));
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  border-radius: 14px;
-  padding: 16px 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(245, 158, 11, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  animation: fadeInDown 0.35s ease;
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.home-tracker-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-}
-
-.home-tracker-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.05));
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: #fbbf24;
-  flex-shrink: 0;
-}
-
-.home-tracker-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 2px;
-}
-
-.home-tracker-desc {
-  font-size: 12px;
-  color: #94a3b8;
-  line-height: 1.4;
-}
-
-.home-tracker-desc strong {
-  color: #fbbf24;
-}
-
-.home-tracker-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.home-tracker-open-btn {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  color: #070d18;
-  border: 1px solid rgba(251, 191, 36, 0.5);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 12.5px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.home-tracker-open-btn:hover {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
-}
-
-@media (max-width: 600px) {
-  .home-tracker-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 14px 16px;
-    gap: 12px;
-  }
-  .home-tracker-right {
-    width: 100%;
-  }
-  .home-tracker-open-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* ── Floating Tracker Button (Bottom Right) ─────────────────── */
-#floatingTrackerBtn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9990;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  color: #070d18;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 13.5px;
-  font-weight: 700;
-  border: 1px solid rgba(251, 191, 36, 0.45);
-  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4), 0 4px 12px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
-}
-
-#floatingTrackerBtn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.55);
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-}
-
-#floatingTrackerBtn .tracker-badge-count {
-  background: #070d18;
-  color: #fbbf24;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 11.5px;
-  font-weight: 800;
-}
-
-/* ── Subject Card Progress Bar ──────────────────────────────── */
-.subject-progress-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.subject-progress-track {
-  flex: 1;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 999px;
-  overflow: hidden;
-  position: relative;
-}
-
-.subject-progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #f59e0b, #10b981);
-  border-radius: 999px;
-  width: 0%;
-  transition: width 0.35s ease;
-}
-
-.subject-progress-text {
-  font-size: 11px;
-  font-weight: 600;
-  color: #fbbf24;
-  white-space: nowrap;
-}
-
-.subject-progress-text.completed {
-  color: #10b981;
-}
-
-/* ── Unit Card / Note Checkbox Button ───────────────────────── */
-.note-item-wrapper,
-.video-item-wrapper {
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-  position: relative;
-}
-
-@media (max-width: 640px) {
-  .note-item-wrapper {
-    flex-wrap: wrap !important;
-    gap: 6px !important;
-  }
-  .note-item-wrapper .note-card-link {
-    width: 100% !important;
-    flex: 1 1 100% !important;
-  }
-  .unit-check-btn {
-    align-self: flex-end;
-    margin-left: auto;
-  }
-}
-
-.note-item-wrapper .note-card-link,
-.note-item-wrapper .note,
-.video-item-wrapper .unit-video-btn {
-  flex: 1 !important;
-  min-width: 0 !important;
-}
-
-.unit-check-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 10px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #cbd5e1;
-  font-size: 11.5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  user-select: none;
-  margin-left: 8px;
-  flex-shrink: 0;
-}
-
-.unit-check-btn:hover {
-  background: rgba(245, 158, 11, 0.2);
-  border-color: #f59e0b;
-  color: #fbbf24;
-}
-
-.unit-check-btn.completed {
-  background: rgba(16, 185, 129, 0.2);
-  border-color: #10b981;
-  color: #34d399;
-}
-
-.unit-check-btn.completed:hover {
-  background: rgba(239, 68, 68, 0.2);
-  border-color: #ef4444;
-  color: #f87171;
-}
-
-/* When a unit link is completed, style subtly */
-.note-card-link.unit-done,
-.unit-video-btn.unit-done,
-.note.unit-done {
-  border-color: rgba(16, 185, 129, 0.4) !important;
-  background: rgba(16, 185, 129, 0.06) !important;
-}
-
-/* ── Toast Notification ─────────────────────────────────────── */
 .gwc-toast {
   position: fixed;
-  bottom: 84px;
-  right: 24px;
-  z-index: 10000;
+  bottom: 80px;
+  right: 20px;
+  background: #111c34;
+  color: #f8fafc;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 20px;
-  background: #0f172a;
-  border: 1px solid rgba(245, 158, 11, 0.4);
-  color: #ffffff;
-  border-radius: 10px;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  z-index: 100000;
   opacity: 0;
   transform: translateY(15px);
+  transition: all 0.25s ease;
   pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .gwc-toast.show {
   opacity: 1;
   transform: translateY(0);
 }
-
 .gwc-toast.success {
   border-color: #10b981;
 }
 
-.gwc-toast.success .toast-icon {
-  color: #10b981;
+/* Floating Tracker Button */
+.gwc-floating-tracker {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #f59e0b;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 12px rgba(245, 158, 11, 0.3);
+  transition: all 0.2s ease;
+}
+.gwc-floating-tracker:hover {
+  background: #f59e0b;
+  color: #070b14;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(245, 158, 11, 0.5);
+}
+.tracker-count {
+  background: #f59e0b;
+  color: #070b14;
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.gwc-floating-tracker:hover .tracker-count {
+  background: #070b14;
+  color: #f59e0b;
 }
 
-/* ── Tracker Modal Dashboard ────────────────────────────────── */
-.tracker-modal-backdrop {
+/* Checkmark Pill inside Note Cards */
+.unit-check-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #cbd5e1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  user-select: none;
+  margin-right: 6px;
+}
+.unit-check-pill:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.15);
+}
+.unit-check-pill.done {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+  color: #34d399;
+}
+.note-card-link.unit-done {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+/* Tracker & APK Modal Backdrops */
+.gwc-modal-backdrop {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(7, 13, 24, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100000;
   align-items: center;
   justify-content: center;
   padding: 16px;
 }
-
-.tracker-modal-backdrop.active {
+.gwc-modal-backdrop.active {
   display: flex;
 }
 
-.tracker-modal-box {
+.gwc-modal-box {
   width: 100%;
-  max-width: 720px;
-  max-height: 90vh;
+  max-width: 520px;
   background: #0f172a;
   border: 1px solid rgba(245, 158, 11, 0.35);
-  border-radius: 16px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(245, 158, 11, 0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  max-height: 85vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes modalScaleUp {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.tracker-modal-header {
+.gwc-modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 22px;
-  background: #141f36;
+  padding: 14px 20px;
+  background: #141c30;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.tracker-modal-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16.5px;
+.gwc-modal-title {
+  font-size: 16px;
   font-weight: 700;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
-.tracker-modal-title i {
-  color: #f59e0b;
-}
-
-.tracker-modal-close {
+.gwc-modal-close {
   background: transparent;
   border: none;
   color: #94a3b8;
   font-size: 20px;
   cursor: pointer;
   padding: 4px;
-  transition: color 0.2s;
+  line-height: 1;
 }
-
-.tracker-modal-close:hover {
+.gwc-modal-close:hover {
   color: #ffffff;
 }
 
-.tracker-modal-body {
-  padding: 20px 22px;
+.gwc-modal-body {
+  padding: 18px 20px;
   overflow-y: auto;
+}
+
+.tracker-stats-card {
+  text-align: center;
+  padding: 18px;
+  background: #141c30;
+  border-radius: 10px;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  margin-bottom: 12px;
+}
+.tracker-stat-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: #f59e0b;
+}
+.tracker-stat-label {
+  font-size: 12.5px;
+  color: #94a3b8;
+}
+
+.tracker-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.tracker-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  background: #111c34;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.tracker-item-info {
+  min-width: 0;
   flex: 1;
 }
-
-/* Overall Stats Row */
-.tracker-stats-summary {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.tracker-stat-card {
-  background: #141f36;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 14px 16px;
-  text-align: center;
-}
-
-.tracker-stat-num {
-  font-size: 22px;
-  font-weight: 800;
-  color: #fbbf24;
-  margin-bottom: 2px;
-}
-
-.tracker-stat-label {
-  font-size: 11.5px;
-  color: #94a3b8;
-  font-weight: 500;
-}
-
-/* Overall Progress Card */
-.tracker-overall-card {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(16, 185, 129, 0.04));
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  border-radius: 12px;
-  padding: 16px 18px;
-  margin-bottom: 22px;
-}
-
-.tracker-overall-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.tracker-overall-label {
-  font-size: 14px;
+.tracker-item-sub {
+  font-size: 11px;
   font-weight: 600;
-  color: #ffffff;
-}
-
-.tracker-overall-percent {
-  font-size: 18px;
-  font-weight: 800;
-  color: #10b981;
-}
-
-.tracker-main-bar {
-  height: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.tracker-main-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #f59e0b, #10b981);
-  border-radius: 999px;
-  width: 0%;
-  transition: width 0.4s ease;
-}
-
-/* Subject List Breakdown */
-.tracker-subjects-title {
-  font-size: 13.5px;
-  font-weight: 700;
-  color: #e2e8f0;
-  margin-bottom: 12px;
+  color: #f59e0b;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+}
+.tracker-item-name {
+  font-size: 13px;
+  color: #f8fafc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tracker-item-date {
+  font-size: 11px;
+  color: #64748b;
+  margin-left: 8px;
+  white-space: nowrap;
 }
 
-.tracker-subject-item {
-  background: #141f36;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  padding: 12px 14px;
-  margin-bottom: 8px;
-}
-
-.tracker-sub-item-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-
-.tracker-sub-name {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.tracker-sub-count {
-  font-size: 11.5px;
-  font-weight: 600;
-  color: #fbbf24;
-}
-
-.tracker-modal-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 22px;
-  background: #141f36;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.btn-reset-tracker {
+.btn-tracker-reset {
   background: transparent;
   border: 1px solid rgba(239, 68, 68, 0.4);
   color: #f87171;
   padding: 6px 14px;
   border-radius: 6px;
   font-size: 12px;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+}
+.btn-tracker-reset:hover {
+  background: rgba(239, 68, 68, 0.15);
 }
 
-.btn-reset-tracker:hover {
-  background: #ef4444;
-  color: #ffffff;
-}
-
-@media (max-width: 600px) {
-  #floatingTrackerBtn {
-    bottom: 16px;
-    right: 16px;
-    padding: 8px 14px;
-    font-size: 12px;
-  }
-  .tracker-stats-summary {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ============================================================
-   ANDROID APK DOWNLOAD BUTTONS & MODAL (GATEWAY CLASSES)
-   ============================================================ */
-
-/* ── Floating APK Button (Hidden from front) ─────────────────── */
-#floatingApkBtn,
-.hero-apk-cta {
-  display: none !important;
-}
-
-/* ── Top Bar Nav APK Button (Subtle, Small, Top Only) ────────── */
-.nav-apk-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 10px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  color: #94a3b8;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.nav-apk-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.35);
-  transform: none;
-  box-shadow: none;
-}
-
-.nav-apk-btn i {
-  color: #94a3b8;
-  font-size: 11px;
-}
-.nav-apk-btn:hover i {
-  color: #ffffff;
-}
-  font-size: 13.5px;
-}
-
-/* ── Hero Section APK Download CTA ──────────────────────────── */
-.hero-apk-cta {
-  margin: 18px auto 0;
+.apk-download-card {
   display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.btn-download-apk-hero {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 24px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: #ffffff;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  border: 1px solid rgba(52, 211, 153, 0.5);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35), 0 2px 8px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  text-decoration: none;
-}
-
-.btn-download-apk-hero:hover {
-  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-  color: #070d18;
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.5);
-}
-
-.btn-download-apk-hero i {
-  font-size: 18px;
-}
-
-.apk-chip-free {
-  background: rgba(7, 13, 24, 0.6);
-  color: #34d399;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(52, 211, 153, 0.3);
-}
-
-.btn-download-apk-hero:hover .apk-chip-free {
-  background: #070d18;
-  color: #fbbf24;
-  border-color: #070d18;
-}
-
-/* ── APK Download Modal Dashboard ───────────────────────────── */
-.apk-modal-backdrop {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(7, 13, 24, 0.88);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 10005;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 16px;
-}
-
-.apk-modal-backdrop.active {
-  display: flex;
-}
-
-.apk-modal-box {
-  width: 100%;
-  max-width: 640px;
-  max-height: 92vh;
-  background: #0f172a;
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  border-radius: 16px;
-  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.9), 0 0 35px rgba(16, 185, 129, 0.15);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.apk-modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 22px;
-  background: #141f36;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.apk-modal-title-group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.apk-modal-logo {
-  width: 44px;
-  height: 44px;
+  background: #141c30;
+  border: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: 10px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(245, 158, 11, 0.15));
-  border: 1px solid rgba(16, 185, 129, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: #34d399;
-}
-
-.apk-modal-title {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16.5px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.apk-modal-sub {
-  font-size: 12px;
-  color: #94a3b8;
-}
-
-.apk-modal-close {
-  background: transparent;
-  border: none;
-  color: #94a3b8;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 4px;
-  transition: color 0.2s;
-}
-.apk-modal-close:hover { color: #ffffff; }
-
-.apk-modal-body {
-  padding: 22px;
-  overflow-y: auto;
-  flex: 1;
-}
-
-/* Feature grid in modal */
-.apk-features-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.apk-feature-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #141f36;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 12px;
-  color: #e2e8f0;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.apk-feature-item i {
-  color: #10b981;
-}
-
-/* Download Cards */
-.apk-download-options {
-  display: flex;
-  flex-direction: column;
   gap: 12px;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
-
-.apk-option-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 18px;
-  border-radius: 12px;
-  background: #141f36;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  gap: 14px;
-  transition: all 0.2s ease;
-}
-
-.apk-option-card.primary {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(245, 158, 11, 0.05));
-  border-color: rgba(16, 185, 129, 0.35);
-}
-
-.apk-option-card:hover {
-  border-color: #10b981;
-  transform: translateY(-1px);
-}
-
-.apk-option-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.apk-option-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: #0f172a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: #34d399;
-  flex-shrink: 0;
-}
-
-.apk-option-text h4 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 2px;
-}
-
-.apk-option-text p {
-  font-size: 11.5px;
-  color: #94a3b8;
-  margin: 0;
-}
-
-.apk-btn-dl-direct {
+.btn-apk-dl {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 9px 18px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #10b981, #059669);
-  color: #070d18;
+  background: #10b981;
+  color: #ffffff;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  cursor: pointer;
-  white-space: nowrap;
-  border: none;
-  transition: all 0.2s;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
-
-.apk-btn-dl-direct:hover {
-  background: linear-gradient(135deg, #34d399, #10b981);
-  transform: translateY(-1px);
+.btn-apk-dl:hover {
+  background: #059669;
 }
-
-.apk-btn-play {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.2s;
-}
-
-.apk-btn-play:hover {
-  background: #ffffff;
-  color: #070d18;
-  border-color: #ffffff;
-}
-
-/* Install steps guide */
-.apk-steps-box {
-  background: #0a1120;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  padding: 14px 16px;
-}
-
-.apk-steps-title {
-  font-size: 12.5px;
-  font-weight: 700;
-  color: #fbbf24;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.apk-steps-list {
-  padding-left: 18px;
-  margin: 0;
-  font-size: 12px;
-  color: #cbd5e1;
-  line-height: 1.6;
-}
-
-@media (max-width: 600px) {
-  .apk-features-grid {
-    grid-template-columns: 1fr;
-  }
-  .apk-option-card {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: left;
-    gap: 10px;
-  }
-  .apk-btn-dl-direct, .apk-btn-play {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
