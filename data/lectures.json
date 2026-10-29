@@ -74,7 +74,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LVQCgcc6ps_NtaaOMBbEIv"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=BEE+Basic+Electrical+Engineering+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=BEE+Electrical+Engineering+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PLh11ucJN276LVQCgcc6ps_NtaaOMBbEIv"
+      }
     },
     {
       "id": "sem1-chemistry",
@@ -118,7 +123,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Engineering+Chemistry+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Engineering+Chemistry+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
+      }
     },
     {
       "id": "sem1-maths1",
@@ -162,7 +172,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vXKy_Vz7YwXrBm7e2cIceO"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vXKy_Vz7YwXrBm7e2cIceO",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Engineering+Mathematics+1+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Engineering+Mathematics+1+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem1-physics",
@@ -207,7 +222,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PLh11ucJN276KQV0jrDM3883tvArRJwB7v"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Engineering+Physics+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Engineering+Physics+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PLh11ucJN276KQV0jrDM3883tvArRJwB7v"
+      }
     },
     {
       "id": "sem1-evs",
@@ -251,7 +271,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Environment+and+Ecology+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Environment+and+Ecology+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
+      }
     },
     {
       "id": "sem1-electronics",
@@ -295,7 +320,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Fundamentals+of+Electronics+Engineering+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Fundamentals+of+Electronics+Engineering+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
+      }
     },
     {
       "id": "sem1-fme",
@@ -339,7 +369,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=FME+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Fundamentals%20of%20Mechanical%20Engineering%20(FME)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Fundamentals%20of%20Mechanical%20Engineering%20(FME)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Fundamentals%20of%20Mechanical%20Engineering%20(FME)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem1-pps",
@@ -383,7 +418,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8sCqx21iu0EnfFgQGL5U19l"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Programming+for+Problem+Solving+PPS+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=PPS+C+Programming+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8sCqx21iu0EnfFgQGL5U19l"
+      }
     },
     {
       "id": "sem1-softskills",
@@ -427,7 +467,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=Soft+Skills+Unit+5+AKTU"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Soft%20Skills%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Soft%20Skills%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Soft%20Skills%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem2-chem",
@@ -472,7 +517,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s1698CXH-iBOAFYGWUcHaG"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Engineering%20Chemistry%20(Group%20A)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Engineering%20Chemistry%20(Group%20A)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Engineering%20Chemistry%20(Group%20A)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem2-maths2",
@@ -516,7 +566,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vzwDx1luAhJLUIWqzbVa-H"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Engineering+Mathematics+2+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Engineering+Mathematics+2+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8vzwDx1luAhJLUIWqzbVa-H"
+      }
     },
     {
       "id": "sem2-evs",
@@ -560,7 +615,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8uoXjVVrLlVhq0CS8tBh7ru"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Environment%20%26%20Ecology%20(Group%20A)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Environment%20%26%20Ecology%20(Group%20A)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Environment%20%26%20Ecology%20(Group%20A)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem2-electronics",
@@ -604,7 +664,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8s5G_BlPJeheBxZfBMts3Vz"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Fundamentals%20of%20Electronics%20(Group%20A)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Fundamentals%20of%20Electronics%20(Group%20A)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Fundamentals%20of%20Electronics%20(Group%20A)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem3-coa",
@@ -648,7 +713,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=COA+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Computer+Organization+COA+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=AKTU+COA+PYQ+Oneshot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Computer+Organization+COA+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem3-dsa",
@@ -692,7 +762,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSA+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Data+Structures+DSA+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSA+Data+Structures+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Data+Structures+DSA+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem3-dstl",
@@ -736,7 +811,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSTL+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Discrete+Structures+DSTL+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DSTL+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=DSTL+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem3-maths4",
@@ -780,7 +860,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Engineering%20Mathematics-IV%20(Maths%204)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Engineering%20Mathematics-IV%20(Maths%204)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Engineering%20Mathematics-IV%20(Maths%204)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem3-python",
@@ -824,7 +909,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Python+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Python%20Programming%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Python%20Programming%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Python%20Programming%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem3-tc",
@@ -868,7 +958,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=Technical+Communication+Unit+5"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Technical%20Communication%20(TC)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Technical%20Communication%20(TC)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Technical%20Communication%20(TC)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem3-uhv",
@@ -912,7 +1007,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PLh11ucJN276LBBbvmFsopt4Lphrxwqlg1"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Universal+Human+Values+UHV+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Universal+Human+Values+UHV+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PLh11ucJN276LBBbvmFsopt4Lphrxwqlg1"
+      }
     },
     {
       "id": "sem4-cyber",
@@ -956,7 +1056,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber+Security+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Cyber+Security+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber+Security+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Cyber+Security+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem4-maths4",
@@ -1000,7 +1105,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=Maths+4+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Engineering%20Mathematics%20IV%20(Complex%20%26%20Stats)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Engineering%20Mathematics%20IV%20(Complex%20%26%20Stats)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Engineering%20Mathematics%20IV%20(Complex%20%26%20Stats)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem4-java",
@@ -1045,7 +1155,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/watch?v=tcPbt94qy3g&t=7200s"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=OOP+Java+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=OOP+with+Java+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=OOP+Java+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem4-os",
@@ -1090,7 +1205,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/watch?v=25sChVM6Dj4&t=7200s"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Operating+System+OS+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Operating+System+OS+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Operating+System+OS+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem4-tafl",
@@ -1134,7 +1254,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=TAFL+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Theory%20of%20Automata%20%26%20Formal%20Languages%20(TAFL)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Theory%20of%20Automata%20%26%20Formal%20Languages%20(TAFL)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Theory%20of%20Automata%20%26%20Formal%20Languages%20(TAFL)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem5-coi",
@@ -1178,7 +1303,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=COI+Unit+5+AKTU"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Constitution%20of%20India%20(COI)%20%2F%20Law%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Constitution%20of%20India%20(COI)%20%2F%20Law%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Constitution%20of%20India%20(COI)%20%2F%20Law%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem5-data-analytics",
@@ -1222,7 +1352,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Data+Analytics+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Data%20Analytics%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Data%20Analytics%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Data%20Analytics%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem5-dbms",
@@ -1266,7 +1401,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DBMS+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=DBMS+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DBMS+Database+Management+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=DBMS+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem5-daa",
@@ -1310,7 +1450,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DAA+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=DAA+Algorithms+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=DAA+Design+and+Analysis+of+Algorithms+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=DAA+Algorithms+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem5-wt",
@@ -1354,7 +1499,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8tzOlGXnZyxvtQLvYZ7Fykm"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Web+Technology+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Web+Technology+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/playlist?list=PL49mRA0Y_C8tzOlGXnZyxvtQLvYZ7Fykm"
+      }
     },
     {
       "id": "sem6-compiler",
@@ -1398,7 +1548,12 @@
           "type": "oneshot",
           "url": "https://youtube.com/playlist?list=PLh11ucJN276J4uv6uwawDr3mNHTdx9n43"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Compiler+Design+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Compiler+Design+AKTU+One+Shot",
+        "multiatoms": "https://youtube.com/playlist?list=PLh11ucJN276J4uv6uwawDr3mNHTdx9n43"
+      }
     },
     {
       "id": "sem6-cn",
@@ -1442,7 +1597,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CN+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Computer%20Networks%20(CN)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Computer%20Networks%20(CN)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Computer%20Networks%20(CN)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem6-ml",
@@ -1486,7 +1646,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Machine%20Learning%20(ML)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine%20Learning%20(ML)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Machine%20Learning%20(ML)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem6-se",
@@ -1530,7 +1695,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=Software+Engineering+Unit+5"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Software%20Engineering%20(SE)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Software%20Engineering%20(SE)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Software%20Engineering%20(SE)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem7-ai",
@@ -1574,7 +1744,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=AI+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Artificial+Intelligence+AI+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Artificial+Intelligence+AI+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Artificial+Intelligence+AI+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem7-blockchain",
@@ -1618,7 +1793,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Blockchain+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Blockchain%20Architecture%20%26%20Design%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Blockchain%20Architecture%20%26%20Design%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Blockchain%20Architecture%20%26%20Design%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem7-cloud",
@@ -1662,7 +1842,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=Cloud+Computing+Unit+5"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Cloud%20Computing%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cloud%20Computing%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Cloud%20Computing%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem7-cns",
@@ -1706,7 +1891,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=CNS+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Cryptography%20%26%20Network%20Security%20(CNS)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cryptography%20%26%20Network%20Security%20(CNS)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Cryptography%20%26%20Network%20Security%20(CNS)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem7-forensics",
@@ -1750,7 +1940,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=Cyber+Forensics+Unit+5"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Cyber%20Forensic%20Analytics%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Cyber%20Forensic%20Analytics%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Cyber%20Forensic%20Analytics%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem7-iot",
@@ -1794,7 +1989,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@MultiAtoms/search?query=IoT+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Internet%20of%20Things%20(IoT)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Internet%20of%20Things%20(IoT)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Internet%20of%20Things%20(IoT)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem8-deep-learning",
@@ -1838,7 +2038,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Deep+Learning+Unit+5"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Deep+Learning+AKTU+One+Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Deep+Learning+AKTU+One+Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Deep+Learning+AKTU+One+Shot"
+      }
     },
     {
       "id": "sem8-dip",
@@ -1882,7 +2087,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@MultiAtoms/search?query=DIP+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Digital%20Image%20Processing%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Digital%20Image%20Processing%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Digital%20Image%20Processing%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem8-distributed",
@@ -1926,7 +2136,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Distributed+Systems+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Distributed%20Systems%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Distributed%20Systems%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Distributed%20Systems%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem8-entrepreneurship",
@@ -1970,7 +2185,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=Entrepreneurship+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Entrepreneurship%20Development%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Entrepreneurship%20Development%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Entrepreneurship%20Development%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem8-ml",
@@ -2014,7 +2234,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine+Learning+Unit+5"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Machine%20Learning%20(ML)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Machine%20Learning%20(ML)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Machine%20Learning%20(ML)%20AKTU%20One%20Shot"
+      }
     },
     {
       "id": "sem8-rer",
@@ -2058,7 +2283,12 @@
           "type": "oneshot",
           "url": "https://www.youtube.com/@GatewayClasses/search?query=RER+Unit+5+One+Shot"
         }
-      ]
+      ],
+      "playlists": {
+        "gateway": "https://www.youtube.com/@GatewayClasses/search?query=Renewable%20Energy%20Resources%20(RER)%20AKTU%20One%20Shot",
+        "ah": "https://www.youtube.com/@AHTUTORIALS2024/search?query=Renewable%20Energy%20Resources%20(RER)%20AKTU%20One%20Shot",
+        "multiatoms": "https://www.youtube.com/@MultiAtoms/search?query=Renewable%20Energy%20Resources%20(RER)%20AKTU%20One%20Shot"
+      }
     }
   ]
 }
